@@ -11,10 +11,10 @@ print("     ######################")
 print()
 print()
 print("Hello!")
-your_name = input("What is your name? ")
+your_name = input("What is your name? \n")
 print(f"Hello {your_name}!")
 print()
-startGame = input("Would you like to go on a quest? (Y/N): ")
+startGame = input("Would you like to go on a quest? (Y/N): \n")
 if startGame == "n" or startGame == "N":
     print("Maybe next time")
 elif startGame == "y" or startGame == "Y":
