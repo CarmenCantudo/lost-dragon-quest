@@ -57,8 +57,8 @@ def dark_forest():
     time.sleep(3)
     print("You need to decide if you want to continue walking along the main road or get out.") # noqa
     main_road = input("Do you want to stay in the main road? (Y/N): \n")
-    # Pick an option
-    if main_road == "y" or main_road == "N":
+    # Option: continue or not on the main road
+    if main_road == "y" or main_road == "Y":
         print("You continue on the main road, walking through the forest, when suddenly you hear a crack.") # noqa
         time.sleep(3)
         print("You fall through a hole in the ground and find yourself surronded by goblins.") # noqa
@@ -71,6 +71,14 @@ def dark_forest():
     print("It is a goblin camp. Suddenly a scream cuts the night and everything becomes quiet.") # noqa
     time.sleep(3)
     print("The goblins have a man.")
+    save_man = input("Do you want to save the man? (Y/N): \n")
+
+    # Option: save the man or continue
+    if save_man == "n" or save_man == "N":
+        print("You leave the camp, walking through the forest, when suddenly you hear a crack.") # noqa
+        time.sleep(3)
+        print("You fall through a hole in the ground and find yourself surronded by goblins.") # noqa
+        game_over()
 
 
 def game_over():
