@@ -2,7 +2,8 @@ import time
 
 
 # Variables
-dragons_name = "Ignit"
+DRAGONS_NAME = "Ignit"
+
 
 def start_quest():
     """
@@ -20,24 +21,28 @@ def start_quest():
     time.sleep(3)
     print("Grabbing this egg to shelter in the warmth until that magical seventh night, when, with a crackle quieter than a mouse, I awoke.") # noqa
     time.sleep(3)
-    print(f"{dragons_name} was born. From that day until now, we raised {dragons_name} as kin.") # noqa
+    print(f"{DRAGONS_NAME} was born. From that day until now, we raised {DRAGONS_NAME} as kin.") # noqa
     time.sleep(3)
     print("That was until Lord Orcus, the evil warlock, took her.")# noqa
     time.sleep(3)
     print("Legend tells that on the blood moon, the blood of a blue back dragon can complete the spell to control all living creatures on planet Apollo.") # noqa
     time.sleep(3)
-    print(f"It is but two days before the blood moon, and I must find and save {dragons_name} and all those on Apollo.") # noqa
+    print(f"It is but two days before the blood moon, and I must find and save {DRAGONS_NAME} and all those on Apollo.") # noqa
     time.sleep(3)
-    print(f"But all I have is my compass made from the stone of Bolcán, pointing to {dragons_name} and courage to guide me on this perilous quest.") # noqa
+    print(f"But all I have is my compass made from the stone of Bolcán, pointing to {DRAGONS_NAME} and courage to guide me on this perilous quest.") # noqa
     time.sleep(3)
 
     continue_game = input("Will you go to save your dragon now? (Y/N): \n")
     if startGame == "n" or startGame == "N":
-        print("Don't wait for too long, {dragons_name} needs you!")
+        print(F"Don't wait for too long, {DRAGONS_NAME} needs you!")
     elif continue_game == "y" or startGame == "Y":
         dark_forest()
 
+
 def dark_forest():
+    """
+    First quest path
+    """
     print()
     print("  #######################")
     print("  | YOUR JOURNEY STARTS |")
@@ -67,18 +72,12 @@ def dark_forest():
     time.sleep(3)
     print("The goblins have a man.")
 
-        
-
-
-
 
 def game_over():
     """
     Finish the game
     """
     print("GAME OVER")
-
-
 
 
 # Game intro (From Comp Sci Central: https://youtu.be/ypNFNr72Xe8)
