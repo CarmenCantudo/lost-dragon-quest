@@ -5,6 +5,31 @@ from colorama import Fore
 # Variables
 DRAGONS_NAME = "Ignit"
 backpack = []
+weapons = ["Shield", "Golden Sword", "Axe", "Fire Bomb", "Potion", "Cloak"] # noqa
+
+
+def chosen_weapon(get_weapon):
+    """
+    Take weapon from weapons list and move it to backpack list
+    """
+    if get_weapon == "0":
+        backpack.insert(0, weapons.pop(weapons.index("Shield")))
+        ice_montain()
+    elif get_weapon == "1":
+        backpack.insert(0, weapons.pop(weapons.index("Golden Sword")))
+        ice_montain()
+    elif get_weapon == "2":
+        backpack.insert(0, weapons.pop(weapons.index("Axe")))
+        ice_montain()
+    elif get_weapon == "3":
+        backpack.insert(0, weapons.pop(weapons.index("Fire Bomb")))
+        ice_montain()
+    elif get_weapon == "4":
+        backpack.insert(0, weapons.pop(weapons.index("Potion")))
+        ice_montain()
+    elif get_weapon == "5":
+        backpack.insert(0, weapons.pop(weapons.index("Cloak")))
+        ice_montain()
 
 
 def start_quest():
@@ -110,12 +135,10 @@ def dark_forest():
     time.sleep(3)
     print("You don't have anything to fight so you need to choose carefully but quickly before they find you.") # noqa
     time.sleep(3)
-    get_weapon = input("Which weapon will you choose? Axe (1) or Fire Bomb (2)\n")
+    
     # Choose weapon
-    if get_weapon == "1":
-        backpack.append("Axe")
-    elif get_weapon == "2":
-        backpack.append("Fire Bomb")
+    get_weapon = input("Which weapon will you choose?\n")
+    chosen_weapon(get_weapon)
     time.sleep(1)
     print("You take the weapon and run and hide far from the camp until everything seems safe.") # noqa
     time.sleep(3)
