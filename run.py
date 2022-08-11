@@ -127,7 +127,22 @@ def ice_montain():
     """
     Second quest path, level 2
     """
-    
+    print()
+    print("  ######################")
+    print("  |  THE ICE MOUNTAIN  |")
+    print("  |       LEVEL 2      |")
+    print("  ######################")
+    print()
+    time.sleep(3)
+    print("You say goodbye to the man and, once you are out of the forest, you check the compass to see where to go next.") # noqa
+    time.sleep(3)
+    print("The compass is pointing to the Ice Mountain.")
+    time.sleep(3)
+    print("The loud whistle of the wind makes you think of otherworldly screams emanating from its underground cavities.") # noqa
+    time.sleep(3)
+    print("You start getting a terrible stench reaching up from the mountain's bowels.") # noqa
+    time.sleep(3)
+    print("You need to continue walking ")
 
 
 def game_over():
