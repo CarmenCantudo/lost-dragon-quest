@@ -4,6 +4,7 @@ import time
 # Variables
 DRAGONS_NAME = "Ignit"
 weapons = ["Shield", "Golden Sword", "Axe", "Bow & Arrow", "Potion", "Cloak"] # noqa
+backpack = []
 
 
 def start_quest():
@@ -96,7 +97,14 @@ def dark_forest():
     time.sleep(3)
     print("You don't have anything fight, only your blacksmith tools so you need to choose carefully but quickly before they find you.") # noqa
     time.sleep(3)
-    choose_weapon = input("Which weapon will you choose? Shield (S) / Golden Sword (S) / Axe (A) / Bow & Arrow (B) / Potion (P) / Cloak (C)") # noqa
+    print("Which weapon will you choose?")
+    time.sleep(1)
+    for i, weapon in enumerate(weapons, start=1):
+        get_weapon = input(i,weapon)
+        chosen_weapon(get_weapon)
+
+
+def chosen_weapon(get_weapon):
 
 
 def game_over():
