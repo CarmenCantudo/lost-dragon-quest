@@ -30,8 +30,41 @@ def start_quest():
     time.sleep(3)
     print(f"But all I have is my compass made from the stone of Bolcán, pointing to {dragons_name} and courage to guide me on this perilous quest.")
     time.sleep(3)
-    
-    print("")
+
+    continue_game = input("Will you go to save your dragon now? (Y/N): \n")
+    if startGame == "n" or startGame == "N":
+        print("Don't wait for too long, {dragons_name} needs you!")
+    elif continue_game == "y" or startGame == "Y":
+        dark_forest()
+
+def dark_forest():
+    print()
+    print("  #######################")
+    print("  | YOUR JOURNEY STARTS |")
+    print("  #######################")
+    print()
+    time.sleep(3)
+    print("The compass is pointing to the North, and to get there you need to go through the Dark Forest.")
+    time.sleep(3)
+    print("The light fades as you enter the forest, turning into a strange dark and quiet place, the sounds have all but vanished.")
+    time.sleep(3)
+    print("The smell of animal or beast hangs in a still air, no flowers seem to help the uneasy odor.")
+    time.sleep(3)
+    print("You need to decide if you want to continue walking along the main road or get out.")
+    main_road = input("Do you want to stay in the main road? (Y/N): \n")
+    if main_road == "y" or main_road == "N":
+        print("You continue on the main road, walking through the forest, when suddenly you hear a crack.")
+        print("You fall through a hole in the ground and find yourself surronded by goblins.")
+        game_over()
+    elif main_road == "n" or main_road == "N":
+        
+
+
+
+
+def game_over():
+    print("GAME OVER")
+
 
 
 
