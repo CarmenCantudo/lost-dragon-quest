@@ -26,6 +26,7 @@ def start_quest():
     time.sleep(3)
     print(f"{DRAGONS_NAME} was born. From that day until now, we raised {DRAGONS_NAME} as kin.") # noqa
     time.sleep(3)
+    print()
     print("That was until Lord Orcus, the evil warlock, took her.")# noqa
     time.sleep(3)
     print("Legend tells that on the blood moon, the blood of a blue back dragon can complete the spell to control all living creatures on planet Apollo.") # noqa
@@ -71,7 +72,10 @@ def dark_forest():
     time.sleep(3)
     print("You see some light nearby. The noises come from that area.")
     time.sleep(3)
-    print("It is a goblin camp. Suddenly a scream cuts the night and everything becomes quiet.") # noqa
+    print("It is a goblin camp.")
+    time.sleep(3)
+    print()
+    print("Suddenly a scream cuts the night and everything becomes quiet.") # noqa
     time.sleep(3)
     print("The goblins have a man.")
     save_man = input("Do you want to save the man? (Y/N): \n")
@@ -84,6 +88,7 @@ def dark_forest():
         game_over()
     elif save_man == "y" or save_man == "Y":
         print("You decide to save the man.")
+        time.sleep(3)
 
     # Save the man
     print("You realised that there is only one goblin standing guard watching over the prisoner.") # noqa
@@ -126,7 +131,7 @@ def chosen_weapon(get_weapon):
         backpack.insert(0, weapons.pop(weapons.index("Cloak")))
     else:
         print(Fore.RED + "Sorry invalid entry.")
-        input_req("Please select a weapon.")
+        input("Please select a weapon.")
 
 
 def game_over():
