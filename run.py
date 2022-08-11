@@ -1,5 +1,6 @@
 import time
-
+import colorama  # import for font colour
+from colorama import Fore
 
 # Variables
 DRAGONS_NAME = "Ignit"
@@ -97,14 +98,35 @@ def dark_forest():
     time.sleep(3)
     print("You don't have anything fight, only your blacksmith tools so you need to choose carefully but quickly before they find you.") # noqa
     time.sleep(3)
-    print("Which weapon will you choose?")
+    print("The weapons are:")
+    for i, weapon in enumerate(weapons):
+        print(i, weapon)
+    weapon_id = input("Which weapon will you choose? (Select a number)\n")
+    get_weapon = weapons[weapon_id]
     time.sleep(1)
-    for i, weapon in enumerate(weapons, start=1):
-        get_weapon = input(i,weapon)
-        chosen_weapon(get_weapon)
+    chosen_weapon(get_weapon)
 
 
 def chosen_weapon(get_weapon):
+    """
+    Take weapon from weapons list and move it to backpack list
+    """
+    if get_weapon == "shield" or get_weapon == "Shield":
+        backpack.insert(0, weapons.pop(weapons.index("Shield")))
+        
+    elif get_weapon == "golden sword" or get_weapon == "Golden Sword":
+        backpack.insert(0, weapons.pop(weapons.index("Golden Sword")))
+    elif get_weapon == "axe" or get_weapon == "Axe":
+        backpack.insert(0, weapons.pop(weapons.index("Axe")))
+    elif get_weapon == "bow & arrow" or get_weapon == "Bow & Arrow":
+        backpack.insert(0, weapons.pop(weapons.index("Bow & Arrow")))
+    elif get_weapon == "potion" or get_weapon == "Potion":
+        backpack.insert(0, weapons.pop(weapons.index("Potion")))
+    elif get_weapon == "cloak" or get_weapon == "Cloak":
+        backpack.insert(0, weapons.pop(weapons.index("Cloak")))
+    else:
+        print(Fore.RED + "Sorry invalid entry.")
+        input_req("Please select a weapon.")
 
 
 def game_over():
