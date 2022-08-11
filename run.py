@@ -53,7 +53,7 @@ def dark_forest():
     print("  #######################")
     print()
     time.sleep(3)
-    print("The compass is pointing to the North, and to get there you need to go through the Dark Forest.") # noqa
+    print("The compass is pointing to the Dark Forest, so you start walking straight away.") # noqa
     time.sleep(3)
     print("The light fades as you enter the forest, turning into a strange dark and quiet place, the sounds have all but vanished.") # noqa
     time.sleep(3)
