@@ -4,7 +4,6 @@ from colorama import Fore
 
 # Variables
 DRAGONS_NAME = "Ignit"
-weapons = ["Shield", "Golden Sword", "Axe", "Bow & Arrow", "Potion", "Cloak"] # noqa
 backpack = []
 
 
@@ -45,11 +44,12 @@ def start_quest():
 
 def dark_forest():
     """
-    First quest path
+    First quest path, level 1
     """
     print()
     print("  #######################")
     print("  | YOUR JOURNEY STARTS |")
+    print("  |       LEVEL 1       |")
     print("  #######################")
     print()
     time.sleep(3)
@@ -67,9 +67,10 @@ def dark_forest():
         time.sleep(3)
         print("You fall through a hole in the ground and find yourself surronded by goblins.") # noqa
         game_over()
-    
-    print("You walk through the dark forest, listening to lots of scary noises.") # noqa
-    time.sleep(3)
+    elif main_road == "n" or main_road == "N":
+        print("You walk through the dark forest and you start hearing lots of scary noises.") # noqa
+        time.sleep(3)
+   
     print("You see some light nearby. The noises come from that area.")
     time.sleep(3)
     print("It is a goblin camp.")
@@ -77,7 +78,7 @@ def dark_forest():
     print()
     print("Suddenly a scream cuts the night and everything becomes quiet.") # noqa
     time.sleep(3)
-    print("The goblins have a man.")
+    print("The goblins have a man bound to a tree.")
     save_man = input("Do you want to save the man? (Y/N): \n")
 
     # Option: save the man or continue
@@ -97,41 +98,36 @@ def dark_forest():
     time.sleep(3)
     print("You decide to take some stones and throw them in the other direction so that the goblin goes to see what is happening.") # noqa
     time.sleep(3)
-    print("When the goblin goes to the noise, you run around the camp to open the cage with your blacksmith tools.") # noqa
+    print("When the goblin goes to the noise, you run around the camp to release the prisoner.") # noqa
+    time.sleep(3)
+    print("The prisoner is now free.")
+    time.sleep(3)
+    print("The man, thankful for his rescue offers some advice:")
+    time.sleep(3)
+    print("- Only fire will rid the beast of the ice.")
     time.sleep(3)
     print("On the way out you see some weapons but only have time to take one with you.") # noqa
     time.sleep(3)
-    print("You don't have anything fight, only your blacksmith tools so you need to choose carefully but quickly before they find you.") # noqa
+    print("You don't have anything to fight so you need to choose carefully but quickly before they find you.") # noqa
     time.sleep(3)
-    print("The weapons are:")
-    for i, weapon in enumerate(weapons):
-        print(i, weapon)
-    weapon_id = input("Which weapon will you choose? (Select a number)\n")
-    get_weapon = weapons[weapon_id]
+    get_weapon = input("Which weapon will you choose? Axe (1) or Fire Bomb (2)\n")
+    # Choose weapon
+    if get_weapon == "1":
+        backpack.append("Axe")
+    elif get_weapon == "2":
+        backpack.append("Fire Bomb")
     time.sleep(1)
-    chosen_weapon(get_weapon)
+    print("You take the weapon and run and hide far from the camp until everything seems safe.") # noqa
+    time.sleep(3)
+    print("You take the weapon and put it in your backpack.")
+    time.sleep(3)
 
 
-def chosen_weapon(get_weapon):
+def ice_montain():
     """
-    Take weapon from weapons list and move it to backpack list
+    Second quest path, level 2
     """
-    if get_weapon == "shield" or get_weapon == "Shield":
-        backpack.insert(0, weapons.pop(weapons.index("Shield")))
-        
-    elif get_weapon == "golden sword" or get_weapon == "Golden Sword":
-        backpack.insert(0, weapons.pop(weapons.index("Golden Sword")))
-    elif get_weapon == "axe" or get_weapon == "Axe":
-        backpack.insert(0, weapons.pop(weapons.index("Axe")))
-    elif get_weapon == "bow & arrow" or get_weapon == "Bow & Arrow":
-        backpack.insert(0, weapons.pop(weapons.index("Bow & Arrow")))
-    elif get_weapon == "potion" or get_weapon == "Potion":
-        backpack.insert(0, weapons.pop(weapons.index("Potion")))
-    elif get_weapon == "cloak" or get_weapon == "Cloak":
-        backpack.insert(0, weapons.pop(weapons.index("Cloak")))
-    else:
-        print(Fore.RED + "Sorry invalid entry.")
-        input("Please select a weapon.")
+    
 
 
 def game_over():
