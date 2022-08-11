@@ -3,6 +3,7 @@ import time
 
 # Variables
 DRAGONS_NAME = "Ignit"
+weapons = ["Shield", "Golden Sword", "Axe", "Bow & Arrow", "Potion", "Cloak"] # noqa
 
 
 def start_quest():
@@ -79,6 +80,23 @@ def dark_forest():
         time.sleep(3)
         print("You fall through a hole in the ground and find yourself surronded by goblins.") # noqa
         game_over()
+    elif save_man == "y" or save_man == "Y":
+        print("You decide to save the man.")
+
+    # Save the man
+    print("You realised that there is only one goblin standing guard watching over the prisoner.") # noqa
+    time.sleep(3)
+    print("You won't have much time to save him before the rest of the goblins come back.") # noqa
+    time.sleep(3)
+    print("You decide to take some stones and throw them in the other direction so that the goblin goes to see what is happening.") # noqa
+    time.sleep(3)
+    print("When the goblin goes to the noise, you run around the camp to open the cage with your blacksmith tools.") # noqa
+    time.sleep(3)
+    print("On the way out you see some weapons but only have time to take one with you.") # noqa
+    time.sleep(3)
+    print("You don't have anything fight, only your blacksmith tools so you need to choose carefully but quickly before they find you.") # noqa
+    time.sleep(3)
+    choose_weapon = input("Which weapon will you choose? Shield (S) / Golden Sword (S) / Axe (A) / Bow & Arrow (B) / Potion (P) / Cloak (C)") # noqa
 
 
 def game_over():
