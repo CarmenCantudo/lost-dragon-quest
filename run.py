@@ -56,7 +56,13 @@ def win_game():
     """
     Win the quest
     """
-    print("YOU WIN!!!")
+    print()
+    print("  ############################")
+    print("  |                          |")
+    print("  |        YOU WIN!!!        |")
+    print("  |                          |")
+    print("  ############################")
+    print()
 
 
 def warlocks_castle():
