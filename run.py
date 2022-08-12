@@ -1,4 +1,4 @@
-import time
+import time,os,sys
 
 
 # Variables
@@ -7,14 +7,41 @@ backpack = []
 weapons = ["Shield", "Golden Sword", "Axe", "Fire Bomb", "Potion", "Cloak"]
 
 
+def printing(text):
+    """
+    Code taken from www.101computing.net
+    """
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+  
+def input_printing(text):
+    """
+    Code taken from www.101computing.net
+    """
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    value = input()  
+    return value
+  
+def clear_screen():
+    """
+    Code taken from www.101computing.net
+    """
+    os.system("clear")
+
+
 def select_weapon():
     """
     Take weapon from weapons list and move it to backpack list
     """
     while select_weapon:
-        print("The weapons are:")
+        printing("The weapons are:")
         for i, item in enumerate(weapons, start=1):
-            print(i, item)
+            printing(i, item)
         get_weapon = input("Which weapon will you choose?\n")
             
         if get_weapon == "1":
@@ -36,7 +63,7 @@ def select_weapon():
             new_weapon = "Cloak"
             break
         else:
-            print("Please select a weapon.")
+            printing("Please select a weapon.")
             select_weapon()
 
     # Delete weapon from weapon's list and add it to the backpack
@@ -48,7 +75,7 @@ def game_over():
     """
     Finish the game
     """
-    print("GAME OVER")
+    printing("GAME OVER")
 
 
 def win_game():
@@ -75,17 +102,17 @@ def warlocks_castle():
     print("  ############################")
     print()
     time.sleep(3)
-    print("You FINALLY GET TO THE WARLOCK'S CASTLE.")
+    printing("You FINALLY GET TO THE WARLOCK'S CASTLE.")
     time.sleep(3)
-    print("Find a way in without being discovered.")
+    printing("Find a way in without being discovered.")
     time.sleep(3)
-    print("FIND YOUR DRAGON")
+    printing("FIND YOUR DRAGON")
     time.sleep(3)
-    print("STOP THE WARLOCK")
+    printing("STOP THE WARLOCK")
     time.sleep(3)
-    print("SAVE YOUR DRAGON")
+    printing("SAVE YOUR DRAGON")
     time.sleep(3)
-    print("YOU WIN")
+    printing("YOU WIN")
     win_game()
 
 
@@ -100,13 +127,13 @@ def white_river():
     print("  #######################")
     print()
     time.sleep(3)
-    print("You can HEAR THE SOUND OF THE WATER.")
+    printing("You can HEAR THE SOUND OF THE WATER.")
     time.sleep(3)
-    print("FIND THE HYDRA")
+    printing("FIND THE HYDRA")
     time.sleep(3)
-    print("KILL OR SCAPE FROM THE HYDRA")
+    printing("KILL OR SCAPE FROM THE HYDRA")
     time.sleep(3)
-    print("GO TO THE EVIL WARLOCK'S CASTLE")
+    printing("GO TO THE EVIL WARLOCK'S CASTLE")
     time.sleep(3)
     warlocks_castle()
 
@@ -122,13 +149,13 @@ def windy_cave():
     print("  ####################")
     print()
     time.sleep(3)
-    print("You can SEE THE MIST COMING OUT OF THE WINDY CAVE.")
+    printing("You can SEE THE MIST COMING OUT OF THE WINDY CAVE.")
     time.sleep(3)
-    print("FIND THE TROLLS")
+    printing("FIND THE TROLLS")
     time.sleep(3)
-    print("KILL OR SCAPE FROM THE TROLLS")
+    printing("KILL OR SCAPE FROM THE TROLLS")
     time.sleep(3)
-    print("GO TO THE EVIL WARLOCK'S CASTLE")
+    printing("GO TO THE EVIL WARLOCK'S CASTLE")
     time.sleep(3)
     warlocks_castle()
 
@@ -144,37 +171,37 @@ def ice_montain():
     print("  ######################")
     print()
     time.sleep(3)
-    print("You can feel the mountain.")
+    printing("You can feel the mountain.")
     time.sleep(3)
-    print("The loud whistle of the wind makes you think of otherworldly screams emanating from its underground cavities.") # noqa
+    printing("The loud whistle of the wind makes you think of otherworldly screams emanating from its underground cavities.") # noqa
     time.sleep(3)
-    print("You start getting a terrible stench reaching up from the mountain's bowels.") # noqa
+    printing("You start getting a terrible stench reaching up from the mountain's bowels.") # noqa
     time.sleep(3)
-    print("You need to continue walking ")
+    printing("You need to continue walking ")
     time.sleep(3)
-    print("GET TO THE ABOMINABLE SNOWMAN")
+    printing("GET TO THE ABOMINABLE SNOWMAN")
     time.sleep(3)
     if backpack == "Fire Bomb":
-        print("USE THE Fire Bomb TO KILL IT")
+        printing("USE THE Fire Bomb TO KILL IT")
     else:
-        print("TRY KILLING IT WITH THE" + ", ".join(backpack).lower())
+        printing("TRY KILLING IT WITH THE" + ", ".join(backpack).lower())
     
     time.sleep(3)
-    print("LEAVE THE MOUNTAIN AND CONTINUE YOUR JOURNEY")
-    print("YOU CHECK THE COMPASS AND IT POINTS TO THE EVIL WARLOCK CASTLE")
-    print("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER OR THROUGH THE WINDY CAVE") # noqa
+    printing("LEAVE THE MOUNTAIN AND CONTINUE YOUR JOURNEY")
+    printing("YOU CHECK THE COMPASS AND IT POINTS TO THE EVIL WARLOCK CASTLE")
+    printing("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER OR THROUGH THE WINDY CAVE") # noqa
     while True:
         path = input("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or WINDY CAVE (2)") # noqa
         if path == "1":
-            print("YOU CHOOSE THE WHITE RIVER")
+            printing("YOU CHOOSE THE WHITE RIVER")
             white_river()
             break
         elif path == "2":
-            print("YOU CHOOSE THE WINDY CAVE")
+            printing("YOU CHOOSE THE WINDY CAVE")
             windy_cave()
             break
         else:
-            print("THAT IS NOT AN OPTION. CHOOSE AGAIN!")
+            printing("THAT IS NOT AN OPTION. CHOOSE AGAIN!")
 
 
 def dark_forest():
@@ -188,72 +215,72 @@ def dark_forest():
     print("  #######################")
     print()
     time.sleep(3)
-    print("The compass is pointing to the Dark Forest, so you start walking straight away.") # noqa
+    printing("The compass is pointing to the Dark Forest, so you start walking straight away.") # noqa
     time.sleep(3)
-    print("The light fades as you enter the forest, turning into a strange dark and quiet place, the sounds have all but vanished.") # noqa
+    printing("The light fades as you enter the forest, turning into a strange dark and quiet place, the sounds have all but vanished.") # noqa
     time.sleep(3)
-    print("The smell of animal or beast hangs in a still air, no flowers seem to help the uneasy odor.") # noqa
+    printing("The smell of animal or beast hangs in a still air, no flowers seem to help the uneasy odor.") # noqa
     time.sleep(3)
-    print("You need to decide if you want to continue walking along the main road or get out.") # noqa
+    printing("You need to decide if you want to continue walking along the main road or get out.") # noqa
     main_road = input("Do you want to stay in the main road? (Y/N): \n")
     # Option: continue or not on the main road
     if main_road == "y" or main_road == "Y":
-        print("You continue on the main road, walking through the forest, when suddenly you hear a crack.") # noqa
+        printing("You continue on the main road, walking through the forest, when suddenly you hear a crack.") # noqa
         time.sleep(3)
-        print("You fall through a hole in the ground and find yourself surronded by goblins.") # noqa
+        printing("You fall through a hole in the ground and find yourself surronded by goblins.") # noqa
         game_over()
     elif main_road == "n" or main_road == "N":
-        print("You walk through the dark forest and you start hearing lots of scary noises.") # noqa
+        printing("You walk through the dark forest and you start hearing lots of scary noises.") # noqa
         time.sleep(3)
    
-    print("You see some light nearby. The noises come from that area.")
+    printing("You see some light nearby. The noises come from that area.")
     time.sleep(3)
-    print("It is a goblin camp.")
+    printing("It is a goblin camp.")
     time.sleep(3)
     print()
-    print("Suddenly a scream cuts the night and everything becomes quiet.") # noqa
+    printing("Suddenly a scream cuts the night and everything becomes quiet.") # noqa
     time.sleep(3)
-    print("The goblins have a man bound to a tree.")
+    printing("The goblins have a man bound to a tree.")
     save_man = input("Do you want to save the man? (Y/N): \n")
 
     # Option: save the man or continue
     if save_man == "n" or save_man == "N":
-        print("You leave the camp, walking through the forest, when suddenly you hear a crack.") # noqa
+        printing("You leave the camp, walking through the forest, when suddenly you hear a crack.") # noqa
         time.sleep(3)
-        print("You fall through a hole in the ground and find yourself surronded by goblins.") # noqa
+        printing("You fall through a hole in the ground and find yourself surronded by goblins.") # noqa
         game_over()
     elif save_man == "y" or save_man == "Y":
-        print("You decide to save the man.")
+        printing("You decide to save the man.")
         time.sleep(3)
 
     # Save the man
-    print("You realised that there is only one goblin standing guard watching over the prisoner.") # noqa
+    printing("You realised that there is only one goblin standing guard watching over the prisoner.") # noqa
     time.sleep(3)
-    print("You won't have much time to save him before the rest of the goblins come back.") # noqa
+    printing("You won't have much time to save him before the rest of the goblins come back.") # noqa
     time.sleep(3)
-    print("You decide to take some stones and throw them in the other direction so that the goblin goes to see what is happening.") # noqa
+    printing("You decide to take some stones and throw them in the other direction so that the goblin goes to see what is happening.") # noqa
     time.sleep(3)
-    print("When the goblin goes to the noise, you run around the camp to release the prisoner.") # noqa
+    printing("When the goblin goes to the noise, you run around the camp to release the prisoner.") # noqa
     time.sleep(3)
-    print("The prisoner is now free.")
+    printing("The prisoner is now free.")
     time.sleep(3)
-    print("The man, thankful for his rescue offers some advice:")
+    printing("The man, thankful for his rescue offers some advice:")
     time.sleep(3)
-    print("- Only fire will rid the beast of the ice.")
+    printing("- Only fire will rid the beast of the ice.")
     time.sleep(3)
-    print("On the way out you see some weapons but only have time to take one with you.") # noqa
+    printing("On the way out you see some weapons but only have time to take one with you.") # noqa
     time.sleep(3)
-    print("You don't have anything to fight so you need to choose carefully but quickly before they find you.") # noqa
+    printing("You don't have anything to fight so you need to choose carefully but quickly before they find you.") # noqa
     time.sleep(3)
     
     # Choose weapon
     new_weapon = select_weapon()
     time.sleep(1)
-    print(f"You take the {new_weapon.lower()} and run and hide far from the camp until everything seems safe.") # noqa
+    printing(f"You take the {new_weapon.lower()} and run and hide far from the camp until everything seems safe.") # noqa
     time.sleep(3)
-    print("You say goodbye to the man and, once you are out of the forest, you check the compass to see where to go next.") # noqa
+    printing("You say goodbye to the man and, once you are out of the forest, you check the compass to see where to go next.") # noqa
     time.sleep(3)
-    print("The compass is pointing to the Ice Mountain.")
+    printing("The compass is pointing to the Ice Mountain.")
     time.sleep(3)
     ice_montain()
 
@@ -262,33 +289,33 @@ def start_quest():
     """
     Story intro
     """
-    print("It was five years ago when, with the shake of the earth upon the eclipse, fire filled the sky.") # noqa
+    printing("It was five years ago when, with the shake of the earth upon the eclipse, fire filled the sky.") # noqa
     time.sleep(3)
-    print("Mount Bolcán had erupted after 1000 years of sleeping.")
+    printing("Mount Bolcán had erupted after 1000 years of sleeping.")
     time.sleep(2)
-    print("They call her the dragon's láir, for when she wakes, the legend says so to a blue back dragon is born.") # noqa
+    printing("They call her the dragon's láir, for when she wakes, the legend says so to a blue back dragon is born.") # noqa
     time.sleep(3)
-    print("With a glimmer of light left from the moon and the fire in the sky, an oval-shaped sphere with a bright red shell began to appear.") # noqa
+    printing("With a glimmer of light left from the moon and the fire in the sky, an oval-shaped sphere with a bright red shell began to appear.") # noqa
     time.sleep(3)
-    print("Tumbling down the mountain until reaching my feet, not a crack nor a scratch to be seen.") # noqa
+    printing("Tumbling down the mountain until reaching my feet, not a crack nor a scratch to be seen.") # noqa
     time.sleep(3)
-    print("Grabbing this egg to shelter in the warmth until that magical seventh night, when, with a crackle quieter than a mouse, I awoke.") # noqa
+    printing("Grabbing this egg to shelter in the warmth until that magical seventh night, when, with a crackle quieter than a mouse, I awoke.") # noqa
     time.sleep(3)
-    print(f"{DRAGONS_NAME} was born. From that day until now, we raised {DRAGONS_NAME} as kin.") # noqa
+    printing(f"{DRAGONS_NAME} was born. From that day until now, we raised {DRAGONS_NAME} as kin.") # noqa
     time.sleep(3)
     print()
-    print("That was until Lord Orcus, the evil warlock, took her.")# noqa
+    printing("That was until Lord Orcus, the evil warlock, took her.")# noqa
     time.sleep(3)
-    print("Legend tells that on the blood moon, the blood of a blue back dragon can complete the spell to control all living creatures on planet Apollo.") # noqa
+    printing("Legend tells that on the blood moon, the blood of a blue back dragon can complete the spell to control all living creatures on planet Apollo.") # noqa
     time.sleep(3)
-    print(f"It is but two days before the blood moon, and I must find and save {DRAGONS_NAME} and all those on Apollo.") # noqa
+    printing(f"It is but two days before the blood moon, and I must find and save {DRAGONS_NAME} and all those on Apollo.") # noqa
     time.sleep(3)
-    print(f"But all I have is my compass made from the stone of Bolcán, pointing to {DRAGONS_NAME} and courage to guide me on this perilous quest.") # noqa
+    printing(f"But all I have is my compass made from the stone of Bolcán, pointing to {DRAGONS_NAME} and courage to guide me on this perilous quest.") # noqa
     time.sleep(3)
 
     continue_game = input("Will you go to save your dragon now? (Y/N): \n")
     if startGame == "n" or startGame == "N":
-        print(F"Don't wait for too long, {DRAGONS_NAME} needs you!")
+        printing(f"Don't wait for too long, {DRAGONS_NAME} needs you!")
     elif continue_game == "y" or startGame == "Y":
         dark_forest()
 
@@ -308,15 +335,15 @@ print("                    ▐█▪▄█·▐█▄█▌▐█▄▄▌▐█
 print("                    ·▀▀█.  ▀▀▀  ▀▀▀  ▀▀▀▀  ▀▀▀                     ")
 print()
 print()
-print("Welcome to the Lost Dragon's Quest!")
+printing("Welcome to the Lost Dragon's Quest!")
 time.sleep(0.2)
 your_name = input("What is your name? \n")
 time.sleep(0.2)
-print(f"Hello {your_name}!")
+printing(f"Hello {your_name}!")
 print()
 time.sleep(0.2)
 startGame = input("Are you ready for an adventure? (Y/N): \n")
 if startGame == "n" or startGame == "N":
-    print("Maybe next time")
+    printing("Maybe next time")
 elif startGame == "y" or startGame == "Y":
     start_quest()
