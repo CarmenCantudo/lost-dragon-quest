@@ -185,38 +185,40 @@ def ice_montain():
     print(LEVEL_TWO)
     print()
     time.sleep(1)
-    printing("You can feel the mountain.")
+    printing("I can feel the mountain.")
     time.sleep(1)
     printing("The loud whistle of the wind makes you think of otherworldly "
              "screams emanating from its underground cavities.")
     time.sleep(1)
-    printing("You start getting a terrible stench reaching up from the "
-             "mountain's bowels.")
-    time.sleep(1)
-    printing("You need to continue walking ")
-    time.sleep(1)
-    printing("GET TO THE ABOMINABLE SNOWMAN")
-    time.sleep(1)
-    if backpack == "Fire Bomb":
-        printing("USE THE Fire Bomb TO KILL IT")
-    else:
-        printing("TRY KILLING IT WITH THE" + ", ".join(backpack).lower())
-    time.sleep(1)
-    printing("LEAVE THE MOUNTAIN AND CONTINUE YOUR JOURNEY")
-    printing("YOU CHECK THE COMPASS AND IT POINTS TO THE EVIL WARLOCK CASTLE")
-    printing("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER "
-             "OR THROUGH THE WINDY CAVE")
-    path = input_printing("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or "
-                          "WINDY CAVE (2)")
+    printing("I start getting a terrible stench reaching up from the "
+             "mountain's bowels.\n")
+    printing("I need to continue walking but it starts getting harder with"
+             " the ice.\n")
+    printing("As I cross the mountain, like an avalanche, the abominable "
+             "snowman appears.\n")
+    printing("I quickly check the bag to get a weapon.\n")
+    printing('The man said "Only fire will rid the beast of the ice"\n')
+    printing("So, as soon as I see a fire bomb I take it and through it to the"
+             " abominable snowman.\n")
+    printing("The snowman doesn't move in time to get out of the way so the "
+             "bomb explodes on top of him, covering him in flames.\n")
+    printing("I run as fast as possible, leaving the mountain behind and "
+             "continuing my journey.\n")
+    printing("I check the compass and it points to the Evil Warlock's Castle.\n") # noqa
+    printing("There are two ways to get there: going across the White River "
+             "or through the Windy Cave.\n")
+    path = input_printing("Which path will you choose? WHITE RIVER (1) or "
+                          "WINDY CAVE (2)\n")
     while True:
         if path == "1":
-            printing("YOU CHOOSE THE WHITE RIVER")
+            printing("I choose the White River.")
             white_river()
         elif path == "2":
-            printing("YOU CHOOSE THE WINDY CAVE")
+            printing("I choose the Windy Cave")
             windy_cave()
         else:
-            path = input_printing("THAT IS NOT AN OPTION. CHOOSE AGAIN!")
+            path = input_printing("That is not an option. Choose again! WHITE "
+                                  "RIVER (1) or WINDY CAVE (2)\n")
 
 
 def dark_forest():
