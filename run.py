@@ -45,39 +45,55 @@ def select_weapon():
     return new_weapon
 
 
-def start_quest():
+def game_over():
     """
-    Story intro
+    Finish the game
     """
-    print("It was five years ago when, with the shake of the earth upon the eclipse, fire filled the sky.") # noqa
-    time.sleep(3)
-    print("Mount Bolcán had erupted after 1000 years of sleeping.")
-    time.sleep(2)
-    print("They call her the dragon's láir, for when she wakes, the legend says so to a blue back dragon is born.") # noqa
-    time.sleep(3)
-    print("With a glimmer of light left from the moon and the fire in the sky, an oval-shaped sphere with a bright red shell began to appear.") # noqa
-    time.sleep(3)
-    print("Tumbling down the mountain until reaching my feet, not a crack nor a scratch to be seen.") # noqa
-    time.sleep(3)
-    print("Grabbing this egg to shelter in the warmth until that magical seventh night, when, with a crackle quieter than a mouse, I awoke.") # noqa
-    time.sleep(3)
-    print(f"{DRAGONS_NAME} was born. From that day until now, we raised {DRAGONS_NAME} as kin.") # noqa
-    time.sleep(3)
-    print()
-    print("That was until Lord Orcus, the evil warlock, took her.")# noqa
-    time.sleep(3)
-    print("Legend tells that on the blood moon, the blood of a blue back dragon can complete the spell to control all living creatures on planet Apollo.") # noqa
-    time.sleep(3)
-    print(f"It is but two days before the blood moon, and I must find and save {DRAGONS_NAME} and all those on Apollo.") # noqa
-    time.sleep(3)
-    print(f"But all I have is my compass made from the stone of Bolcán, pointing to {DRAGONS_NAME} and courage to guide me on this perilous quest.") # noqa
-    time.sleep(3)
+    print("GAME OVER")
 
-    continue_game = input("Will you go to save your dragon now? (Y/N): \n")
-    if startGame == "n" or startGame == "N":
-        print(F"Don't wait for too long, {DRAGONS_NAME} needs you!")
-    elif continue_game == "y" or startGame == "Y":
-        dark_forest()
+
+def ice_montain():
+    """
+    Second quest path, level 2
+    """
+    print()
+    print("  ######################")
+    print("  |  THE ICE MOUNTAIN  |")
+    print("  |       LEVEL 2      |")
+    print("  ######################")
+    print()
+    time.sleep(3)
+    print("You can feel the mountain.")
+    time.sleep(3)
+    print("The loud whistle of the wind makes you think of otherworldly screams emanating from its underground cavities.") # noqa
+    time.sleep(3)
+    print("You start getting a terrible stench reaching up from the mountain's bowels.") # noqa
+    time.sleep(3)
+    print("You need to continue walking ")
+    time.sleep(3)
+    print("GET TO THE ABOMINABLE SNOWMAN")
+    time.sleep(3)
+    if backpack == "Fire Bomb":
+        print("USE THE Fire Bomb TO KILL IT")
+    else:
+        print("TRY KILLING IT WITH THE" + ", ".join(backpack).lower())
+    
+    time.sleep(3)
+    print("LEAVE THE MOUNTAIN AND CONTINUE YOUR JOURNEY")
+    print("YOU CHECK THE COMPASS AND IT POINTS TO THE EVIL WARLOCK CASTLE")
+    print("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER OR THROUGH THE WINDY CAVE") # noqa
+    while True:
+        path = input("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or WINDY CAVE (2)") # noqa
+        if path == "1":
+            print("YOU CHOOSE THE WHITE RIVER")
+            white_river()
+            break
+        elif path == "2":
+            print("YOU CHOOSE THE WINDY CAVE")
+            windy_cave()
+            break
+        else:
+            print("THAT IS NOT AN OPTION. CHOOSE AGAIN!")
 
 
 def dark_forest():
@@ -161,56 +177,39 @@ def dark_forest():
     ice_montain()
 
 
-def ice_montain():
+def start_quest():
     """
-    Second quest path, level 2
+    Story intro
     """
+    print("It was five years ago when, with the shake of the earth upon the eclipse, fire filled the sky.") # noqa
+    time.sleep(3)
+    print("Mount Bolcán had erupted after 1000 years of sleeping.")
+    time.sleep(2)
+    print("They call her the dragon's láir, for when she wakes, the legend says so to a blue back dragon is born.") # noqa
+    time.sleep(3)
+    print("With a glimmer of light left from the moon and the fire in the sky, an oval-shaped sphere with a bright red shell began to appear.") # noqa
+    time.sleep(3)
+    print("Tumbling down the mountain until reaching my feet, not a crack nor a scratch to be seen.") # noqa
+    time.sleep(3)
+    print("Grabbing this egg to shelter in the warmth until that magical seventh night, when, with a crackle quieter than a mouse, I awoke.") # noqa
+    time.sleep(3)
+    print(f"{DRAGONS_NAME} was born. From that day until now, we raised {DRAGONS_NAME} as kin.") # noqa
+    time.sleep(3)
     print()
-    print("  ######################")
-    print("  |  THE ICE MOUNTAIN  |")
-    print("  |       LEVEL 2      |")
-    print("  ######################")
-    print()
+    print("That was until Lord Orcus, the evil warlock, took her.")# noqa
     time.sleep(3)
-    print("You can feel the mountain.")
+    print("Legend tells that on the blood moon, the blood of a blue back dragon can complete the spell to control all living creatures on planet Apollo.") # noqa
     time.sleep(3)
-    print("The loud whistle of the wind makes you think of otherworldly screams emanating from its underground cavities.") # noqa
+    print(f"It is but two days before the blood moon, and I must find and save {DRAGONS_NAME} and all those on Apollo.") # noqa
     time.sleep(3)
-    print("You start getting a terrible stench reaching up from the mountain's bowels.") # noqa
+    print(f"But all I have is my compass made from the stone of Bolcán, pointing to {DRAGONS_NAME} and courage to guide me on this perilous quest.") # noqa
     time.sleep(3)
-    print("You need to continue walking ")
-    time.sleep(3)
-    print("GET TO THE ABOMINABLE SNOWMAN")
-    time.sleep(3)
-    if backpack == "Fire Bomb":
-        print("USE THE Fire Bomb TO KILL IT")
-    else:
-        print("TRY KILLING IT WITH THE" + ", ".join(backpack).lower())
-    
-    time.sleep(3)
-    print("LEAVE THE MOUNTAIN AND CONTINUE YOUR JOURNEY")
-    print("YOU CHECK THE COMPASS AND IT POINTS TO THE EVIL WARLOCK CASTLE")
-    print("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER OR THROUGH THE WINDY CAVE")
-    while True:
-        path = input("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or WINDY CAVE (2)")
-        if path == "1":
-            print("YOU CHOOSE THE WHITE RIVER")
-            white_river()
-            break
-        elif path == "2":
-            print("YOU CHOOSE THE WINDY CAVE")
-            windy_cave()
-            break
-        else:
-            print("THAT IS NOT AN OPTION. CHOOSE AGAIN!")
 
-    
-
-def game_over():
-    """
-    Finish the game
-    """
-    print("GAME OVER")
+    continue_game = input("Will you go to save your dragon now? (Y/N): \n")
+    if startGame == "n" or startGame == "N":
+        print(F"Don't wait for too long, {DRAGONS_NAME} needs you!")
+    elif continue_game == "y" or startGame == "Y":
+        dark_forest()
 
 
 # Game intro (From Comp Sci Central: https://youtu.be/ypNFNr72Xe8)
