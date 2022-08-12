@@ -294,7 +294,7 @@ def dark_forest():
             time.sleep(1)
             break
         else:
-            printing("Enter Y or N")   
+            main_road = input_printing("Enter Y or N")   
     printing("You see some light nearby. The noises come from that area.\n")
     time.sleep(1)
     printing("It is a goblin camp.\n")
@@ -319,7 +319,7 @@ def dark_forest():
             time.sleep(1)
             break
         else:
-            printing("Select Y or N")
+            save_man = input_printing("Select Y or N")
 
     # Save the man
     printing("You realised that there is only one goblin standing guard "
@@ -399,7 +399,7 @@ def start_quest():
              " planet Apollo.\n")
     time.sleep(1)
     printing("It is but two days before the Blood Moon, and I must find and "
-             f"save {DRAGONS_NAME} and all those on Apollo.")
+             f"save {DRAGONS_NAME} and all those on Apollo.\n")
     time.sleep(1)
     printing(f"But all I have is my compass made from the stone of Bolcán, "
              f"pointing to {DRAGONS_NAME} and courage to guide me on this "
@@ -419,6 +419,9 @@ def start_quest():
             dark_forest()
         else:
             printing("Incorrect answer. Insert Y or N.\n")
+            continue_game = input_printing("Will you go to save your dragon "
+                                           "now? (Y/N): \n")
+            time.sleep(2)
 
 
 def main():
@@ -449,7 +452,8 @@ def main():
         elif start_game.lower() == "y":
             start_quest()
         else:
-            input_printing("Wrong choice. Please, click Y or N.\n")
+            start_game = input_printing("Wrong choice. Please, click Y or N.\n"
+                                        )
 
 
 main()
