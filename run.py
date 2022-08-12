@@ -67,7 +67,7 @@ def white_river():
     time.sleep(3)
     print("FIND THE HYDRA")
     time.sleep(3)
-    print("KILL OR SCAPE FORM THE HYDRA")
+    print("KILL OR SCAPE FROM THE HYDRA")
     time.sleep(3)
     print("GO TO THE EVIL WARLOCK'S CASTLE")
     time.sleep(3)
@@ -86,6 +86,14 @@ def windy_cave():
     print()
     time.sleep(3)
     print("You can SEE THE MIST COMING OUT OF THE WINDY CAVE.")
+    time.sleep(3)
+    print("FIND THE TROLLS")
+    time.sleep(3)
+    print("KILL OR SCAPE FROM THE TROLLS")
+    time.sleep(3)
+    print("GO TO THE EVIL WARLOCK'S CASTLE")
+    time.sleep(3)
+    warlocks_castle()
 
 
 def ice_montain():
