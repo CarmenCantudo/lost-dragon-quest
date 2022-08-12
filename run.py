@@ -5,8 +5,6 @@ import sys
 
 # Variables
 DRAGONS_NAME = "Ignit"
-backpack = []
-weapons = ["Shield", "Golden Sword", "Axe", "Fire Bomb", "Potion", "Cloak"]
 QUEST_TITLE = ("""
 
 ▄▄▌        .▄▄ · ▄▄▄▄▄    ·▄▄▄▄  ▄▄▄   ▄▄▄·  ▄▄ •        ▐ ▄ .▄▄ · 
@@ -42,6 +40,12 @@ LEVEL_ONE = """
 |       LEVEL 1       |
 #######################
 """
+LEVEL_TWO = """
+######################
+|  THE ICE MOUNTAIN  |
+|       LEVEL 2      |
+######################
+"""
 
 
 def printing(text):
@@ -71,43 +75,6 @@ def clear_screen():
     Code taken from www.101computing.net
     """
     os.system("clear")
-
-
-def select_weapon():
-    """
-    Take weapon from weapons list and move it to backpack list
-    """
-    while select_weapon:
-        printing("The weapons are:")
-        for i, item in enumerate(weapons, start=1):
-            print(i, item)
-        get_weapon = input_printing("Which weapon will you choose?\n")
-            
-        if get_weapon == "1":
-            new_weapon = "Shield"
-            break
-        elif get_weapon == "2":
-            new_weapon = "Golden Sword"
-            break
-        elif get_weapon == "3":
-            new_weapon = "Axe"
-            break
-        elif get_weapon == "4":
-            new_weapon = "Fire Bomb"
-            break
-        elif get_weapon == "5":
-            new_weapon = "Potion"
-            break
-        elif get_weapon == "6":
-            new_weapon = "Cloak"
-            break
-        else:
-            printing("Please select a weapon.")
-            select_weapon()
-
-    # Delete weapon from weapon's list and add it to the backpack
-    backpack.insert(0, weapons.pop(weapons.index(new_weapon)))
-    return new_weapon
 
 
 def game_over():
@@ -215,19 +182,16 @@ def ice_montain():
     Second quest path, level 2
     """
     print()
-    print("  ######################")
-    print("  |  THE ICE MOUNTAIN  |")
-    print("  |       LEVEL 2      |")
-    print("  ######################")
+    print(LEVEL_TWO)
     print()
     time.sleep(1)
     printing("You can feel the mountain.")
     time.sleep(1)
-    printing("The loud whistle of the wind makes you think of otherworldly \
-        screams emanating from its underground cavities.")
+    printing("The loud whistle of the wind makes you think of otherworldly "
+             "screams emanating from its underground cavities.")
     time.sleep(1)
-    printing("You start getting a terrible stench reaching up from the \
-        mountain's bowels.")
+    printing("You start getting a terrible stench reaching up from the "
+             "mountain's bowels.")
     time.sleep(1)
     printing("You need to continue walking ")
     time.sleep(1)
@@ -237,25 +201,22 @@ def ice_montain():
         printing("USE THE Fire Bomb TO KILL IT")
     else:
         printing("TRY KILLING IT WITH THE" + ", ".join(backpack).lower())
-    
     time.sleep(1)
     printing("LEAVE THE MOUNTAIN AND CONTINUE YOUR JOURNEY")
     printing("YOU CHECK THE COMPASS AND IT POINTS TO THE EVIL WARLOCK CASTLE")
-    printing("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER \
-        OR THROUGH THE WINDY CAVE")
+    printing("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER "
+             "OR THROUGH THE WINDY CAVE")
+    path = input_printing("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or "
+                          "WINDY CAVE (2)")
     while True:
-        path = input_printing("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or \
-            WINDY CAVE (2)")
         if path == "1":
             printing("YOU CHOOSE THE WHITE RIVER")
             white_river()
-            break
         elif path == "2":
             printing("YOU CHOOSE THE WINDY CAVE")
             windy_cave()
-            break
         else:
-            printing("THAT IS NOT AN OPTION. CHOOSE AGAIN!")
+            path = input_printing("THAT IS NOT AN OPTION. CHOOSE AGAIN!")
 
 
 def dark_forest():
@@ -337,21 +298,12 @@ def dark_forest():
     printing("The prisoner is now free.\n")
     time.sleep(1)
     printing("The man, thankful for his rescue offers some advice:\n")
-    time.sleep(1)
     printing("- Only fire will rid the beast of the ice.\n")
     time.sleep(1)
-    printing("On the way out you see some weapons but only have time to take "
-             "one with you.\n")
+    printing("On the way out you see some weapons and you take them with you.\n")
     time.sleep(1)
-    printing("You don't have anything to fight so you need to choose carefully"
-             " but quickly before they find you.\n")
-    time.sleep(1)
-    
-    # Choose weapon
-    new_weapon = select_weapon()
-    time.sleep(1)
-    printing(f"You take the {new_weapon.lower()} and run and hide far from the"
-             " camp until everything seems safe.\n")
+    printing("You put the weapons in your backpack and run and hide far from "
+             "the camp until everything seems safe.\n")
     time.sleep(1)
     printing("You say goodbye to the man and, once you are out of the forest, "
              "you check the compass to see where to go next.\n")
