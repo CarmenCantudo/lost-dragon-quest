@@ -27,8 +27,8 @@ def input_printing(text):
         time.sleep(0.05)
     value = input()  
     return value
-  
-  
+
+
 def clear_screen():
     """
     Code taken from www.101computing.net
@@ -291,6 +291,28 @@ def start_quest():
     """
     Story intro
     """
+    print("           ..                           ")
+    print("           +*         .        :        ")
+    print("          -%+        -:        *:       ")
+    print("        .**%:      .*+: -       #       ")
+    print("       :%**#     .=%%%#%#==.   .%*      ")
+    print("      -%#-%=    =%*%%#=%%=+    **++     ")
+    print("     -%%=+%*  +%#=%*=- #%++:  =%*:%=    ")
+    print("    .%%+##%%=  .-*.  -#%#=  .*%%+#*%.   ")
+    print("    *%*%%*%%%#=:  .=#%%=.:-*%%%*%%+%*   ")
+    print("   :%##%%*%%*=-+*#%%%##*%%%%%%%%%*#%%   ")
+    print("   *%*%%%#%-  :=*%%#. .  .*#%%%%%*%%%   ")
+    print("   %%*%%+-= .-:#%#*-#*::.    -%%#%%%*   ")
+    print("   %%#%.    -.+%%+:%+. ..-::  ##%%%%:   ")
+    print("   %%%%=   -.:%%*=.%*-+*%%%*  -%%%%=    ")
+    print("   +%=    .-.+%%+* :+*+-:=%*   +%%-     ")
+    print("   .+     ::.+%%##*-   :-+#+   **.      ")
+    print("    :      =:-%%%##*+#:=%%%.  ..        ")
+    print("           ::.+%%%%%%%%%%#.             ")
+    print("            .:--+%%%%%%+:               ")
+    print("               ...:-:                   ")
+    print()
+    time.sleep(3)
     printing("It was five years ago when, with the shake of the earth upon the eclipse, fire filled the sky.") # noqa
     time.sleep(3)
     printing("Mount Bolcán had erupted after 1000 years of sleeping.")
@@ -347,5 +369,6 @@ time.sleep(0.2)
 startGame = input_printing("Are you ready for an adventure? (Y/N): \n")
 if startGame == "n" or startGame == "N":
     printing("Maybe next time")
+    clear_screen()
 elif startGame == "y" or startGame == "Y":
     start_quest()
