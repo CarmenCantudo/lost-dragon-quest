@@ -1,4 +1,6 @@
-import time,os,sys
+import time
+import os
+import sys
 
 
 # Variables
@@ -78,6 +80,17 @@ def game_over():
     Finish the game
     """
     printing("GAME OVER")
+    play_again = input_printing("Do you want to play again? Y/N")
+    while True:
+        if play_again.lower() == "y":
+            start_quest()
+            break
+        elif play_again.lower() == "n":
+            printing("Ok, see you soon!")
+            clear_screen()
+            break
+        else:
+            printing("Wrong answer. Insert Y or N.")
 
 
 def win_game():
@@ -372,31 +385,42 @@ def start_quest():
         dark_forest()
 
 
-# Game intro (From Comp Sci Central: https://youtu.be/ypNFNr72Xe8)
-print()
-print()
-print("▄▄▌        .▄▄ · ▄▄▄▄▄    ·▄▄▄▄  ▄▄▄   ▄▄▄·  ▄▄ •        ▐ ▄ .▄▄ · ")
-print("██•  ▪     ▐█ ▀. •██      ██▪ ██ ▀▄ █·▐█ ▀█ ▐█ ▀ ▪▪     •█▌▐█▐█ ▀. ")
-print("██▪   ▄█▀▄ ▄▀▀▀█▄ ▐█.▪    ▐█· ▐█▌▐▀▀▄ ▄█▀▀█ ▄█ ▀█▄ ▄█▀▄ ▐█▐▐▌▄▀▀▀█▄")
-print("▐█▌▐▌▐█▌.▐▌▐█▄▪▐█ ▐█▌·    ██. ██ ▐█•█▌▐█ ▪▐▌▐█▄▪▐█▐█▌.▐▌██▐█▌▐█▄▪▐█")
-print(".▀▀▀  ▀█▄▀▪ ▀▀▀▀  ▀▀▀     ▀▀▀▀▀• .▀  ▀ ▀  ▀ ·▀▀▀▀  ▀█▄▀▪▀▀ █▪ ▀▀▀▀ ")
-print("                    .▄▄▄  ▄• ▄▌▄▄▄ ..▄▄ · ▄▄▄▄▄                    ")
-print("                    ▐▀•▀█ █▪██▌▀▄.▀·▐█ ▀. •██                      ")
-print("                    █▌·.█▌█▌▐█▌▐▀▀▪▄▄▀▀▀█▄ ▐█.▪                    ")
-print("                    ▐█▪▄█·▐█▄█▌▐█▄▄▌▐█▄▪▐█ ▐█▌·                    ")
-print("                    ·▀▀█.  ▀▀▀  ▀▀▀  ▀▀▀▀  ▀▀▀                     ")
-print()
-print()
-printing("Welcome to the Lost Dragon's Quest!")
-time.sleep(0.2)
-your_name = input_printing("What is your name? \n")
-time.sleep(0.2)
-printing(f"Hello {your_name}!")
-print()
-time.sleep(0.2)
-startGame = input_printing("Are you ready for an adventure? (Y/N): \n")
-if startGame == "n" or startGame == "N":
-    printing("Maybe next time")
-    clear_screen()
-elif startGame == "y" or startGame == "Y":
-    start_quest()
+def main():
+    """
+    Runs the application and shows game intro
+    """
+    print()
+    print()
+    print("▄▄▌        .▄▄ · ▄▄▄▄▄    ·▄▄▄▄  ▄▄▄   ▄▄▄·  ▄▄ •        ▐ ▄ .▄▄ · ")
+    print("██•  ▪     ▐█ ▀. •██      ██▪ ██ ▀▄ █·▐█ ▀█ ▐█ ▀ ▪▪     •█▌▐█▐█ ▀. ")
+    print("██▪   ▄█▀▄ ▄▀▀▀█▄ ▐█.▪    ▐█· ▐█▌▐▀▀▄ ▄█▀▀█ ▄█ ▀█▄ ▄█▀▄ ▐█▐▐▌▄▀▀▀█▄")
+    print("▐█▌▐▌▐█▌.▐▌▐█▄▪▐█ ▐█▌·    ██. ██ ▐█•█▌▐█ ▪▐▌▐█▄▪▐█▐█▌.▐▌██▐█▌▐█▄▪▐█")
+    print(".▀▀▀  ▀█▄▀▪ ▀▀▀▀  ▀▀▀     ▀▀▀▀▀• .▀  ▀ ▀  ▀ ·▀▀▀▀  ▀█▄▀▪▀▀ █▪ ▀▀▀▀ ")
+    print("                    .▄▄▄  ▄• ▄▌▄▄▄ ..▄▄ · ▄▄▄▄▄                    ")
+    print("                    ▐▀•▀█ █▪██▌▀▄.▀·▐█ ▀. •██                      ")
+    print("                    █▌·.█▌█▌▐█▌▐▀▀▪▄▄▀▀▀█▄ ▐█.▪                    ")
+    print("                    ▐█▪▄█·▐█▄█▌▐█▄▄▌▐█▄▪▐█ ▐█▌·                    ")
+    print("                    ·▀▀█.  ▀▀▀  ▀▀▀  ▀▀▀▀  ▀▀▀                     ")
+    print()
+    print()
+    printing("Welcome to the Lost Dragon's Quest! \n")
+    time.sleep(0.2)
+    your_name = input_printing("What is your name? \n")
+    time.sleep(0.2)
+    printing(f"Hello {your_name}!")
+    print()
+    time.sleep(0.2)
+    start_game = input_printing("Are you ready for an adventure? (Y/N): \n")
+    while True:
+        if start_game.lower() == "n":
+            printing("Maybe next time")
+            time.sleep(3)
+            clear_screen()
+            main()
+        elif start_game.lower() == "y":
+            start_quest()
+        else:
+            input_printing("Wrong choice. Please, click Y or N.")
+
+
+main()
