@@ -1,6 +1,5 @@
 import time
-# import colorama  # import for font colour
-from colorama import Fore
+
 
 # Variables
 DRAGONS_NAME = "Ignit"
@@ -37,7 +36,7 @@ def select_weapon():
             new_weapon = "Cloak"
             break
         else:
-            print(Fore.RED + "Please select a weapon.")
+            print("Please select a weapon.")
             select_weapon()
 
     # Delete weapon from weapon's list and add it to the backpack
@@ -49,7 +48,7 @@ def game_over():
     """
     Finish the game
     """
-    print(Fore.RED + "GAME OVER")
+    print("GAME OVER")
 
 
 def win_game():
