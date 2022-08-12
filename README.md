@@ -112,7 +112,7 @@ The Header at the top of the page features a contrasting font that makes it stan
 - [GitHub](https://github.com/): Used to store my repository for submission.
 - [Gitpod](https://gitpod.io/): Used to develop the application.
 - GitBash: Used to push the repository to Github.
-- [HeroKu](https://www.heroku.com/): Used host and deploy the application.
+- [Heroku](https://www.heroku.com/): Used host and deploy the application.
 
 
 - [Am I Responsive?](https://ui.dev/amiresponsive): to ensure the project looked good across all devices.
@@ -124,7 +124,7 @@ The Header at the top of the page features a contrasting font that makes it stan
 ## Deployment
 
 ### Using Heroku
-1. Use Heroku to create a new app.
+1. Use [Heroku](https://www.heroku.com/) to create a new app.
 2. In Settings, add two buildpacks in the following order:
    - Python
    - NodeJS
