@@ -114,7 +114,7 @@ The Header at the top of the page features a contrasting font that makes it stan
 - GitBash: Used to push the repository to Github.
 - [Heroku](https://www.heroku.com/): Used host and deploy the application.
 
-
+- [Lucidchart](https://www.lucidchart.com/): Used to make a flow diagram to help with the logic & flow of the code.
 - [Am I Responsive?](https://ui.dev/amiresponsive): to ensure the project looked good across all devices.
 - [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/): to complete the Readme.
 - Google Chrome DevTools – Used to debug and evaluate the site's responsiveness.
