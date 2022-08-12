@@ -52,7 +52,12 @@ LEVEL_THREE_CAVE = """
 |      LEVEL 3      |
 #####################
 """
-
+LEVEL_THREE_RIVER = """
+#######################
+|   THE WHITE RIVER   |
+|       LEVEL 3       |
+#######################
+"""
 
 def printing(text):
     """
@@ -144,19 +149,39 @@ def white_river():
     Third quest path, level 3
     """
     print()
-    print("  #######################")
-    print("  |   THE WHITE RIVER   |")
-    print("  |       LEVEL 3       |")
-    print("  #######################")
+    print(LEVEL_THREE_RIVER)
     print()
     time.sleep(1)
-    printing("You can HEAR THE SOUND OF THE WATER.")
+    printing("As I approach the river the sounds of nature all but disappear.\n")
+    printing("Now just rapid water fills my ears.\n")
+    printing("Crossing the wooden bridge broken and soaked I hear the scream "
+             "of Hydra.\n")
+    printing("There she is in all her glory moving through the water like a "
+             "knife through butter, ready to attack.\n")
     time.sleep(1)
-    printing("FIND THE HYDRA")
-    time.sleep(1)
-    printing("KILL OR SCAPE FROM THE HYDRA")
-    time.sleep(1)
-    printing("GO TO THE EVIL WARLOCK'S CASTLE")
+    printing("You look through your backpack and see an ice bomb and a golden "
+             "sword.")
+    use_weapons = input_printing("Should I use them? Y/N")
+    while True:
+        if use_weapons.lower() == "n":
+            printing("The Hydra is faster than me.\n")
+            printing("It only takes her a few steps to capture me.\n")
+            game_over()
+        elif use_weapons.lower() == "y":
+            printing("I take the ice bomb and through it to the river.\n")
+            break
+        else:
+            use_weapons = input_printing("Choose Y/N.")
+    printing("It immediately turns to ice, trapping the Hydra.\n")
+    printing("Unable to move she tries to reach me with her heads but she "
+             "can't.\n")
+    printing("I pick up the sword and start fighting the Hydra.")
+    printing("She is stronger than me but the golden sword can hurt her and "
+             "she can't grow more heads.\n")
+    printing("I manage to get to her and stab her with the sword.")
+    printing("The Hydra falls badly injured to one side and I take the "
+             "opportunity to cross the river and flee.")
+    printing(f"Finally with one last mission {DRAGONS_NAME} shall be free.\n")
     time.sleep(1)
     warlocks_castle()
 
@@ -198,19 +223,19 @@ def windy_cave():
     printing("If they don't hear or see me, maybe I have an opportunity to "
              "escape without being seen.\n")
     printing("I just remember seeing an invisibility cloak in the backpack.\n")
-    input_printing("Should I use it? Y/N")
+    use_cloak = input_printing("Should I use it? Y/N")
     while True:
-        if use_sword.lower() == "y":
+        if use_cloak.lower() == "y":
             printing("I take the cloak and very quietly walk across the cavern"
                      " until I find myself save again and continue my quest.\n") # noqa
-        elif use_sword.lower() == "n":
+        elif use_cloak.lower() == "n":
             printing("Suddenly a troll gives a snoring sound that scares you "
                      "and makes you fall on one of them.\n")
             printing("The trolls wake up and instantly capture me.\n")
             game_over()
             break
         else:
-            use_sword = input_printing("Wrong answer. Should I use it? Y/N")
+            use_cloak = input_printing("Wrong answer. Should I use it? Y/N")
     printing(f"Finally with one last mission {DRAGONS_NAME} shall be free.\n")
     time.sleep(1)
     warlocks_castle()
