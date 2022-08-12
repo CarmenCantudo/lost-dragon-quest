@@ -59,11 +59,19 @@ def white_river():
     print()
     print("  #######################")
     print("  |   THE WHITE RIVER   |")
-    print("  |       LEVEL 2       |")
+    print("  |       LEVEL 3       |")
     print("  #######################")
     print()
     time.sleep(3)
     print("You can HEAR THE SOUND OF THE WATER.")
+    time.sleep(3)
+    print("FIND THE HYDRA")
+    time.sleep(3)
+    print("KILL OR SCAPE FORM THE HYDRA")
+    time.sleep(3)
+    print("GO TO THE EVIL WARLOCK'S CASTLE")
+    time.sleep(3)
+    warlocks_castle()
 
 
 def windy_cave():
