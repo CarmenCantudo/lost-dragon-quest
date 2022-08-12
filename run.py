@@ -263,90 +263,90 @@ def dark_forest():
     print("  #######################")
     print()
     time.sleep(1)
-    printing("The compass is pointing to the Dark Forest, so you start \
-        walking straight away.")
+    printing("The compass is pointing to the Dark Forest, so you start "
+             "walking straight away.\n")
     time.sleep(1)
-    printing("The light fades as you enter the forest, turning into a strange \
-        dark and quiet place, the sounds have all but vanished.")
+    printing("The light fades as you enter the forest, turning into a strange "
+             "dark and quiet place, the sounds have all but vanished.\n")
     time.sleep(1)
-    printing("The smell of animal or beast hangs in a still air, no flowers \
-        seem to help the uneasy odor.")
+    printing("The smell of animal or beast hangs in a still air, no flowers "
+             "seem to help the uneasy odor.\n")
     time.sleep(1)
-    printing("You need to decide if you want to continue walking along the \
-        main road or get out.")
-    main_road = input_printing("Do you want to stay in the main road? (Y/N): \
-        \n")
+    printing("You need to decide if you want to continue walking along the "
+             "main road or get out.")
+    main_road = input_printing("Do you want to stay in the main road? (Y/N):\n"
+                               )
     # Option: continue or not on the main road
     if main_road == "y" or main_road == "Y":
-        printing("You continue on the main road, walking through the forest, \
-            when suddenly you hear a crack.")
+        printing("You continue on the main road, walking through the forest, "
+                 "when suddenly you hear a crack.\n")
         time.sleep(1)
-        printing("You fall through a hole in the ground and find yourself \
-            surronded by goblins.")
+        printing("You fall through a hole in the ground and find yourself "
+                 "surronded by goblins.\n")
         game_over()
     elif main_road == "n" or main_road == "N":
-        printing("You walk through the dark forest and you start hearing lots \
-            of scary noises.")
+        printing("You walk through the dark forest and you start hearing lots "
+                 "of scary noises.\n")
         time.sleep(1)
    
-    printing("You see some light nearby. The noises come from that area.")
+    printing("You see some light nearby. The noises come from that area.\n")
     time.sleep(1)
-    printing("It is a goblin camp.")
+    printing("It is a goblin camp.\n")
     time.sleep(1)
     print()
-    printing("Suddenly a scream cuts the night and everything becomes quiet.")
+    printing("Suddenly a scream cuts the night and everything becomes quiet.\n")
     time.sleep(1)
-    printing("The goblins have a man bound to a tree.")
+    printing("The goblins have a man bound to a tree.\n")
     save_man = input_printing("Do you want to save the man? (Y/N): \n")
 
     # Option: save the man or continue
     if save_man == "n" or save_man == "N":
-        printing("You leave the camp, walking through the forest, when \
-            suddenly you hear a crack.")
+        printing("You leave the camp, walking through the forest, when "
+                 "suddenly you hear a crack.\n")
         time.sleep(1)
-        printing("You fall through a hole in the ground and find yourself \
-            surronded by goblins.")
+        printing("You fall through a hole in the ground and find yourself "
+                 "surronded by goblins.\n")
         game_over()
     elif save_man == "y" or save_man == "Y":
         printing("You decide to save the man.")
         time.sleep(1)
 
     # Save the man
-    printing("You realised that there is only one goblin standing guard \
-        watching over the prisoner.")
+    printing("You realised that there is only one goblin standing guard "
+             "watching over the prisoner.\n")
     time.sleep(1)
-    printing("You won't have much time to save him before the rest of the \
-        goblins come back.")
+    printing("You won't have much time to save him before the rest of the "
+             "goblins come back.\n")
     time.sleep(1)
-    printing("You decide to take some stones and throw them in the other \
-        direction so that the goblin goes to see what is happening.")
+    printing("You decide to take some stones and throw them in the other "
+             "direction so that the goblin goes to see what is happening.\n")
     time.sleep(1)
-    printing("When the goblin goes to the noise, you run around the camp to \
-        release the prisoner.")
+    printing("When the goblin goes to the noise, you run around the camp to "
+             "release the prisoner.\n")
     time.sleep(1)
-    printing("The prisoner is now free.")
+    printing("The prisoner is now free.\n")
     time.sleep(1)
-    printing("The man, thankful for his rescue offers some advice:")
+    printing("The man, thankful for his rescue offers some advice:\n")
     time.sleep(1)
-    printing("- Only fire will rid the beast of the ice.")
+    printing("- Only fire will rid the beast of the ice.\n")
     time.sleep(1)
-    printing("On the way out you see some weapons but only have time to take \
-        one with you.")
+    printing("On the way out you see some weapons but only have time to take "
+             "one with you.\n")
     time.sleep(1)
-    printing("You don't have anything to fight so you need to choose carefully\
-         but quickly before they find you.")
+    printing("You don't have anything to fight so you need to choose carefully"
+             " but quickly before they find you.\n")
     time.sleep(1)
     
     # Choose weapon
     new_weapon = select_weapon()
     time.sleep(1)
-    printing(f"You take the {new_weapon.lower()} and run and hide far from the\
-         camp until everything seems safe.")
+    printing(f"You take the {new_weapon.lower()} and run and hide far from the"
+             " camp until everything seems safe.\n")
     time.sleep(1)
-    printing("You say goodbye to the man and, once you are out of the forest, \
-        you check the compass to see where to go next.")
+    printing("You say goodbye to the man and, once you are out of the forest, "
+             "you check the compass to see where to go next.\n")
     time.sleep(1)
-    printing("The compass is pointing to the Ice Mountain.")
+    printing("The compass is pointing to the Ice Mountain.\n")
     time.sleep(1)
     ice_montain()
 
