@@ -124,7 +124,13 @@ The Header at the top of the page features a contrasting font that makes it stan
 ## Deployment
 
 ### Using Heroku
-
+1. Use Heroku to create a new app.
+2. In Settings, add two buildpacks in the following order:
+   - Python
+   - NodeJS
+3. Link the new app to the appropriate repository after granting Heroku access to GitHub.
+4. Make the decision to enable Automatic Deploys or not. If enabled, each push to GitHub will result in an automatic update of the deployed app.
+5. Click Deploy.
 
 
 ### How to Fork it
