@@ -52,6 +52,34 @@ def game_over():
     print("GAME OVER")
 
 
+def white_river():
+    """
+    Second quest path, level 2
+    """
+    print()
+    print("  #######################")
+    print("  |   THE WHITE RIVER   |")
+    print("  |       LEVEL 2       |")
+    print("  #######################")
+    print()
+    time.sleep(3)
+    print("You can HEAR THE SOUND OF THE WATER.")
+
+
+def windy_cave():
+    """
+    Second quest path, level 2
+    """
+    print()
+    print("  ####################")
+    print("  |  THE WINDY CAVE  |")
+    print("  |      LEVEL 3     |")
+    print("  ####################")
+    print()
+    time.sleep(3)
+    print("You can SEE THE MIST COMING OUT OF THE WINDY CAVE.")
+
+
 def ice_montain():
     """
     Second quest path, level 2
