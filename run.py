@@ -5,31 +5,44 @@ from colorama import Fore
 # Variables
 DRAGONS_NAME = "Ignit"
 backpack = []
-weapons = ["Shield", "Golden Sword", "Axe", "Fire Bomb", "Potion", "Cloak"] # noqa
+weapons = ["Shield", "Golden Sword", "Axe", "Fire Bomb", "Potion", "Cloak"]
 
 
-def chosen_weapon(get_weapon):
+def select_weapon():
     """
     Take weapon from weapons list and move it to backpack list
     """
-    if get_weapon == "0":
-        backpack.insert(0, weapons.pop(weapons.index("Shield")))
-        ice_montain()
-    elif get_weapon == "1":
-        backpack.insert(0, weapons.pop(weapons.index("Golden Sword")))
-        ice_montain()
-    elif get_weapon == "2":
-        backpack.insert(0, weapons.pop(weapons.index("Axe")))
-        ice_montain()
-    elif get_weapon == "3":
-        backpack.insert(0, weapons.pop(weapons.index("Fire Bomb")))
-        ice_montain()
-    elif get_weapon == "4":
-        backpack.insert(0, weapons.pop(weapons.index("Potion")))
-        ice_montain()
-    elif get_weapon == "5":
-        backpack.insert(0, weapons.pop(weapons.index("Cloak")))
-        ice_montain()
+    choice = True
+    while True:
+        print("The weapons are:")
+        for i, item in enumerate(weapons, start=1):
+            print(i,item)
+        get_weapon = input("Which weapon will you choose?\n")
+            
+        if get_weapon == "1":
+            new_weapon = "Shield"
+            break
+        elif get_weapon == "2":
+            new_weapon = "Golden Sword"
+            break
+        elif get_weapon == "3":
+            new_weapon = "Axe"
+            break
+        elif get_weapon == "4":
+            new_weapon = "Fire Bomb"
+            break
+        elif get_weapon == "5":
+            new_weapon = "Potion"
+            break
+        elif get_weapon == "6":
+            new_weapon = "Cloak"
+            break
+        else:
+            print("Please select a weapon.")
+            select_weapon()
+    # Delete weapon from weapon's list and add it to the backpack
+    backpack.insert(0, weapons.pop(weapons.index(new_weapon)))
+    return new_weapon
 
 
 def start_quest():
@@ -137,13 +150,15 @@ def dark_forest():
     time.sleep(3)
     
     # Choose weapon
-    get_weapon = input("Which weapon will you choose?\n")
-    chosen_weapon(get_weapon)
+    new_weapon = select_weapon()
     time.sleep(1)
-    print("You take the weapon and run and hide far from the camp until everything seems safe.") # noqa
+    print(f"You take the {new_weapon.lower()} and run and hide far from the camp until everything seems safe.") # noqa
     time.sleep(3)
-    print("You take the weapon and put it in your backpack.")
+    print("You say goodbye to the man and, once you are out of the forest, you check the compass to see where to go next.") # noqa
     time.sleep(3)
+    print("The compass is pointing to the Ice Mountain.")
+    time.sleep(3)
+    ice_montain()
 
 
 def ice_montain():
@@ -156,10 +171,6 @@ def ice_montain():
     print("  |       LEVEL 2      |")
     print("  ######################")
     print()
-    time.sleep(3)
-    print("You say goodbye to the man and, once you are out of the forest, you check the compass to see where to go next.") # noqa
-    time.sleep(3)
-    print("The compass is pointing to the Ice Mountain.")
     time.sleep(3)
     print("The loud whistle of the wind makes you think of otherworldly screams emanating from its underground cavities.") # noqa
     time.sleep(3)
