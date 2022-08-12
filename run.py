@@ -46,6 +46,12 @@ LEVEL_TWO = """
 |       LEVEL 2      |
 ######################
 """
+LEVEL_THREE_CAVE = """
+#####################
+|  THE WINDY CAVES  |
+|      LEVEL 3      |
+#####################
+"""
 
 
 def printing(text):
@@ -160,19 +166,52 @@ def windy_cave():
     Third quest path, level 3
     """
     print()
-    print("  ####################")
-    print("  |  THE WINDY CAVE  |")
-    print("  |      LEVEL 3     |")
-    print("  ####################")
+    print(LEVEL_THREE_CAVE)
     print()
     time.sleep(1)
-    printing("You can SEE THE MIST COMING OUT OF THE WINDY CAVE.")
-    time.sleep(1)
-    printing("FIND THE TROLLS")
-    time.sleep(1)
-    printing("KILL OR SCAPE FROM THE TROLLS")
-    time.sleep(1)
-    printing("GO TO THE EVIL WARLOCK'S CASTLE")
+    printing("I can see the mist coming out of the Windy Caves.\n")
+    printing("As I travel further and further in the windy caves the light "
+             "begins to disappear until the darkness has consumed the bright.\n") # noqa
+    printing("A loud growl of what sounds like a troll echos in the chamber of"
+             " black.\n")
+    printing("There is a golden sword in my backpack. The sword is flammable.\n") # noqa
+    use_sword = input_printing("Do you want to use the golden sword to light "
+                               "the room? Y/N\n")
+    while True:
+        if use_sword.lower() == "y":
+            printing("I take the sword and continue walking until I start "
+                     "hearing some strange noises.\n")
+        elif use_sword.lower() == "n":
+            printing("I see a light coming towards me.\n")
+            printing("I try to hide but can't see anything.\n")
+            printing("It's too late! I see some trolls coming to get me.\n")
+            printing("I run and try to scape but there are a lot of them and "
+                     "they catch me.\n")
+            game_over()
+            break
+        else:
+            use_sword = input_printing("Wrong answer! Do you want to use the "
+                                       "golden sword to light the room? Y/N\n")
+    printing("I keep walking along the underground corridor until I reach a "
+             "cavern.\n")
+    printing("Suddenly I find myself surrounded by sleepy trolls.\n")
+    printing("If they don't hear or see me, maybe I have an opportunity to "
+             "escape without being seen.\n")
+    printing("I just remember seeing an invisibility cloak in the backpack.\n")
+    input_printing("Should I use it? Y/N")
+    while True:
+        if use_sword.lower() == "y":
+            printing("I take the cloak and very quietly walk across the cavern"
+                     " until I find myself save again and continue my quest.\n") # noqa
+        elif use_sword.lower() == "n":
+            printing("Suddenly a troll gives a snoring sound that scares you "
+                     "and makes you fall on one of them.\n")
+            printing("The trolls wake up and instantly capture me.\n")
+            game_over()
+            break
+        else:
+            use_sword = input_printing("Wrong answer. Should I use it? Y/N")
+    printing(f"Finally with one last mission {DRAGONS_NAME} shall be free.\n")
     time.sleep(1)
     warlocks_castle()
 
