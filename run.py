@@ -7,6 +7,35 @@ import sys
 DRAGONS_NAME = "Ignit"
 backpack = []
 weapons = ["Shield", "Golden Sword", "Axe", "Fire Bomb", "Potion", "Cloak"]
+QUEST_TITLE = ("""
+
+▄▄▌        .▄▄ · ▄▄▄▄▄    ·▄▄▄▄  ▄▄▄   ▄▄▄·  ▄▄ •        ▐ ▄ .▄▄ · 
+██•  ▪     ▐█ ▀. •██      ██▪ ██ ▀▄ █·▐█ ▀█ ▐█ ▀ ▪▪     •█▌▐█▐█ ▀. 
+██▪   ▄█▀▄ ▄▀▀▀█▄ ▐█.▪    ▐█· ▐█▌▐▀▀▄ ▄█▀▀█ ▄█ ▀█▄ ▄█▀▄ ▐█▐▐▌▄▀▀▀█▄
+▐█▌▐▌▐█▌.▐▌▐█▄▪▐█ ▐█▌·    ██. ██ ▐█•█▌▐█ ▪▐▌▐█▄▪▐█▐█▌.▐▌██▐█▌▐█▄▪▐█
+.▀▀▀  ▀█▄▀▪ ▀▀▀▀  ▀▀▀     ▀▀▀▀▀• .▀  ▀ ▀  ▀ ·▀▀▀▀  ▀█▄▀▪▀▀ █▪ ▀▀▀▀ 
+                    .▄▄▄  ▄• ▄▌▄▄▄ ..▄▄ · ▄▄▄▄▄                    
+                    ▐▀•▀█ █▪██▌▀▄.▀·▐█ ▀. •██                      
+                    █▌·.█▌█▌▐█▌▐▀▀▪▄▄▀▀▀█▄ ▐█.▪                    
+                    ▐█▪▄█·▐█▄█▌▐█▄▄▌▐█▄▪▐█ ▐█▌·                    
+                    ·▀▀█.  ▀▀▀  ▀▀▀  ▀▀▀▀  ▀▀▀                     
+""")
+DRAGON = """
+        ..                    
+        ++      :      =.     
+      .*#:     +=.:     +     
+     :%=#    =%%#%#=.  .#-    
+    -%=#*  =#*%#:*%+:  *+*:   
+   :%**%%: -==. =%#: .#%*+%   
+   ##%*%%%*=:.+%%+--*%%#%*%+  
+  -%#%%##:.=+%%+--=#%%%%%*%*  
+  +%#%+=:.-=%#=+=:. .:*%#%%+  
+  *%#-  .-=%#-#+ :==- -%%%%.  
+  +%*-  -.*%+:=##*+%#  +%%:   
+  .=    -.#%**:  .:**  =*.    
+   .    -.+%%###*+%%:  .      
+         -:*%%%%%%+.          
+"""
 
 
 def printing(text):
@@ -206,8 +235,8 @@ def ice_montain():
     time.sleep(1)
     printing("LEAVE THE MOUNTAIN AND CONTINUE YOUR JOURNEY")
     printing("YOU CHECK THE COMPASS AND IT POINTS TO THE EVIL WARLOCK CASTLE")
-    printing("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER OR \
-        THROUGH THE WINDY CAVE")
+    printing("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER \
+        OR THROUGH THE WINDY CAVE")
     while True:
         path = input_printing("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or \
             WINDY CAVE (2)")
@@ -234,8 +263,8 @@ def dark_forest():
     print("  #######################")
     print()
     time.sleep(1)
-    printing("The compass is pointing to the Dark Forest, so you start walking \
-        straight away.")
+    printing("The compass is pointing to the Dark Forest, so you start \
+        walking straight away.")
     time.sleep(1)
     printing("The light fades as you enter the forest, turning into a strange \
         dark and quiet place, the sounds have all but vanished.")
@@ -327,20 +356,7 @@ def start_quest():
     Story intro
     """
     time.sleep(1)
-    print("        ..                    ")
-    print("        ++      :      =.     ")
-    print("      .*#:     +=.:     +     ")
-    print("     :%=#    =%%#%#=.  .#-    ")
-    print("    -%=#*  =#*%#:*%+:  *+*:   ")
-    print("   :%**%%: -==. =%#: .#%*+%   ")
-    print("   ##%*%%%*=:.+%%+--*%%#%*%+  ")
-    print("  -%#%%##:.=+%%+--=#%%%%%*%*  ")
-    print("  +%#%+=:.-=%#=+=:. .:*%#%%+  ")
-    print("  *%#-  .-=%#-#+ :==- -%%%%.  ")
-    print("  +%*-  -.*%+:=##*+%#  +%%:   ")
-    print("  .=    -.#%**:  .:**  =*.    ")
-    print("   .    -.+%%###*+%%:  .      ")
-    print("         -:*%%%%%%+.          ")
+    print(DRAGON)
     print()
     time.sleep(1)
     printing("It was five years ago when, with the shake of the earth upon \
@@ -399,16 +415,7 @@ def main():
     """
     print()
     print()
-    print("▄▄▌        .▄▄ · ▄▄▄▄▄    ·▄▄▄▄  ▄▄▄   ▄▄▄·  ▄▄ •        ▐ ▄ .▄▄ · ")
-    print("██•  ▪     ▐█ ▀. •██      ██▪ ██ ▀▄ █·▐█ ▀█ ▐█ ▀ ▪▪     •█▌▐█▐█ ▀. ")
-    print("██▪   ▄█▀▄ ▄▀▀▀█▄ ▐█.▪    ▐█· ▐█▌▐▀▀▄ ▄█▀▀█ ▄█ ▀█▄ ▄█▀▄ ▐█▐▐▌▄▀▀▀█▄")
-    print("▐█▌▐▌▐█▌.▐▌▐█▄▪▐█ ▐█▌·    ██. ██ ▐█•█▌▐█ ▪▐▌▐█▄▪▐█▐█▌.▐▌██▐█▌▐█▄▪▐█")
-    print(".▀▀▀  ▀█▄▀▪ ▀▀▀▀  ▀▀▀     ▀▀▀▀▀• .▀  ▀ ▀  ▀ ·▀▀▀▀  ▀█▄▀▪▀▀ █▪ ▀▀▀▀ ")
-    print("                    .▄▄▄  ▄• ▄▌▄▄▄ ..▄▄ · ▄▄▄▄▄                    ")
-    print("                    ▐▀•▀█ █▪██▌▀▄.▀·▐█ ▀. •██                      ")
-    print("                    █▌·.█▌█▌▐█▌▐▀▀▪▄▄▀▀▀█▄ ▐█.▪                    ")
-    print("                    ▐█▪▄█·▐█▄█▌▐█▄▄▌▐█▄▪▐█ ▐█▌·                    ")
-    print("                    ·▀▀█.  ▀▀▀  ▀▀▀  ▀▀▀▀  ▀▀▀                     ")
+    print(QUEST_TITLE)
     print()
     print()
     printing("Welcome to the Lost Dragon's Quest! \n")
