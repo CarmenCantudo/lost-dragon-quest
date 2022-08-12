@@ -1,5 +1,5 @@
 import time
-import colorama  # import for font colour
+# import colorama  # import for font colour
 from colorama import Fore
 
 # Variables
@@ -37,7 +37,7 @@ def select_weapon():
             new_weapon = "Cloak"
             break
         else:
-            print("Please select a weapon.")
+            print(Fore.RED + "Please select a weapon.")
             select_weapon()
 
     # Delete weapon from weapon's list and add it to the backpack
@@ -49,7 +49,7 @@ def game_over():
     """
     Finish the game
     """
-    print("GAME OVER")
+    print(Fore.RED + "GAME OVER")
 
 
 def win_game():
