@@ -52,9 +52,16 @@ def game_over():
     print("GAME OVER")
 
 
+def win_game():
+    """
+    Win the quest
+    """
+    print("YOU WIN!!!")
+
+
 def warlocks_castle():
     """
-    Second quest path, level 2
+    Final quest path, last level
     """
     print()
     print("  ############################")
@@ -79,7 +86,7 @@ def warlocks_castle():
 
 def white_river():
     """
-    Third quest path, level 2
+    Third quest path, level 3
     """
     print()
     print("  #######################")
@@ -101,7 +108,7 @@ def white_river():
 
 def windy_cave():
     """
-    Third quest path, level 2
+    Third quest path, level 3
     """
     print()
     print("  ####################")
