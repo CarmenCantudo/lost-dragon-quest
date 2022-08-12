@@ -33,8 +33,14 @@ DRAGON = """
   *%#-  .-=%#-#+ :==- -%%%%.  
   +%*-  -.*%+:=##*+%#  +%%:   
   .=    -.#%**:  .:**  =*.    
-   .    -.+%%###*+%%:  .      
-         -:*%%%%%%+.          
+   .    -.+%%###*+%%:  .
+         -:*%%%%%%+.
+"""
+LEVEL_ONE = """
+#######################
+| YOUR JOURNEY STARTS |
+|       LEVEL 1       |
+#######################
 """
 
 
@@ -257,10 +263,7 @@ def dark_forest():
     First quest path, level 1
     """
     print()
-    print("  #######################")
-    print("  | YOUR JOURNEY STARTS |")
-    print("  |       LEVEL 1       |")
-    print("  #######################")
+    print(LEVEL_ONE)
     print()
     time.sleep(1)
     printing("The compass is pointing to the Dark Forest, so you start "
@@ -277,39 +280,46 @@ def dark_forest():
     main_road = input_printing("Do you want to stay in the main road? (Y/N):\n"
                                )
     # Option: continue or not on the main road
-    if main_road == "y" or main_road == "Y":
-        printing("You continue on the main road, walking through the forest, "
-                 "when suddenly you hear a crack.\n")
-        time.sleep(1)
-        printing("You fall through a hole in the ground and find yourself "
-                 "surronded by goblins.\n")
-        game_over()
-    elif main_road == "n" or main_road == "N":
-        printing("You walk through the dark forest and you start hearing lots "
-                 "of scary noises.\n")
-        time.sleep(1)
-   
+    while True:
+        if main_road.lower() == "y":
+            printing("You continue on the main road, walking through the "
+                     "forest, when suddenly you hear a crack.\n")
+            time.sleep(1)
+            printing("You fall through a hole in the ground and find yourself "
+                     "surronded by goblins.\n")
+            game_over()
+        elif main_road.lower() == "n":
+            printing("You walk through the dark forest and you start hearing "
+                     "lots of scary noises.\n")
+            time.sleep(1)
+            break
+        else:
+            printing("Enter Y or N")   
     printing("You see some light nearby. The noises come from that area.\n")
     time.sleep(1)
     printing("It is a goblin camp.\n")
     time.sleep(1)
     print()
-    printing("Suddenly a scream cuts the night and everything becomes quiet.\n")
+    printing("Suddenly a scream cuts the night and everything becomes quiet.\n") # noqa
     time.sleep(1)
     printing("The goblins have a man bound to a tree.\n")
     save_man = input_printing("Do you want to save the man? (Y/N): \n")
 
     # Option: save the man or continue
-    if save_man == "n" or save_man == "N":
-        printing("You leave the camp, walking through the forest, when "
-                 "suddenly you hear a crack.\n")
-        time.sleep(1)
-        printing("You fall through a hole in the ground and find yourself "
-                 "surronded by goblins.\n")
-        game_over()
-    elif save_man == "y" or save_man == "Y":
-        printing("You decide to save the man.")
-        time.sleep(1)
+    while True:
+        if save_man.lower() == "n":
+            printing("You leave the camp, walking through the forest, when "
+                     "suddenly you hear a crack.\n")
+            time.sleep(1)
+            printing("You fall through a hole in the ground and find yourself "
+                     "surronded by goblins.\n")
+            game_over()
+        elif save_man.lower() == "y":
+            printing("You decide to save the man.")
+            time.sleep(1)
+            break
+        else:
+            printing("Select Y or N")
 
     # Save the man
     printing("You realised that there is only one goblin standing guard "
