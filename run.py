@@ -16,6 +16,7 @@ def printing(text):
         sys.stdout.flush()
         time.sleep(0.05)
   
+
 def input_printing(text):
     """
     Code taken from www.101computing.net
@@ -26,6 +27,7 @@ def input_printing(text):
         time.sleep(0.05)
     value = input()  
     return value
+  
   
 def clear_screen():
     """
@@ -41,8 +43,8 @@ def select_weapon():
     while select_weapon:
         printing("The weapons are:")
         for i, item in enumerate(weapons, start=1):
-            printing(i, item)
-        get_weapon = input("Which weapon will you choose?\n")
+            print(i, item)
+        get_weapon = input_printing("Which weapon will you choose?\n")
             
         if get_weapon == "1":
             new_weapon = "Shield"
@@ -191,7 +193,7 @@ def ice_montain():
     printing("YOU CHECK THE COMPASS AND IT POINTS TO THE EVIL WARLOCK CASTLE")
     printing("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER OR THROUGH THE WINDY CAVE") # noqa
     while True:
-        path = input("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or WINDY CAVE (2)") # noqa
+        path = input_printing("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or WINDY CAVE (2)") # noqa
         if path == "1":
             printing("YOU CHOOSE THE WHITE RIVER")
             white_river()
@@ -222,7 +224,7 @@ def dark_forest():
     printing("The smell of animal or beast hangs in a still air, no flowers seem to help the uneasy odor.") # noqa
     time.sleep(3)
     printing("You need to decide if you want to continue walking along the main road or get out.") # noqa
-    main_road = input("Do you want to stay in the main road? (Y/N): \n")
+    main_road = input_printing("Do you want to stay in the main road? (Y/N): \n")
     # Option: continue or not on the main road
     if main_road == "y" or main_road == "Y":
         printing("You continue on the main road, walking through the forest, when suddenly you hear a crack.") # noqa
@@ -241,7 +243,7 @@ def dark_forest():
     printing("Suddenly a scream cuts the night and everything becomes quiet.") # noqa
     time.sleep(3)
     printing("The goblins have a man bound to a tree.")
-    save_man = input("Do you want to save the man? (Y/N): \n")
+    save_man = input_printing("Do you want to save the man? (Y/N): \n")
 
     # Option: save the man or continue
     if save_man == "n" or save_man == "N":
@@ -313,7 +315,7 @@ def start_quest():
     printing(f"But all I have is my compass made from the stone of Bolcán, pointing to {DRAGONS_NAME} and courage to guide me on this perilous quest.") # noqa
     time.sleep(3)
 
-    continue_game = input("Will you go to save your dragon now? (Y/N): \n")
+    continue_game = input_printing("Will you go to save your dragon now? (Y/N): \n")
     if startGame == "n" or startGame == "N":
         printing(f"Don't wait for too long, {DRAGONS_NAME} needs you!")
     elif continue_game == "y" or startGame == "Y":
@@ -337,12 +339,12 @@ print()
 print()
 printing("Welcome to the Lost Dragon's Quest!")
 time.sleep(0.2)
-your_name = input("What is your name? \n")
+your_name = input_printing("What is your name? \n")
 time.sleep(0.2)
 printing(f"Hello {your_name}!")
 print()
 time.sleep(0.2)
-startGame = input("Are you ready for an adventure? (Y/N): \n")
+startGame = input_printing("Are you ready for an adventure? (Y/N): \n")
 if startGame == "n" or startGame == "N":
     printing("Maybe next time")
 elif startGame == "y" or startGame == "Y":
