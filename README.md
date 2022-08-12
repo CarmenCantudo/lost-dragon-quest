@@ -1,7 +1,7 @@
 # Lost Dragon’s Quest
 
 
-The rules for this game are simple.
+This is a text based adventure based in python. The game is a text adventure set in a magical land in planet Apollo.
 
 
 ![Responsive web image](assets/docs/testing/amiresponsive.PNG)
