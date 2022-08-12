@@ -52,9 +52,34 @@ def game_over():
     print("GAME OVER")
 
 
-def white_river():
+def warlocks_castle():
     """
     Second quest path, level 2
+    """
+    print()
+    print("  ############################")
+    print("  |   THE WARLOCK'S CASTLE   |")
+    print("  |       FINAL LEVEL        |")
+    print("  ############################")
+    print()
+    time.sleep(3)
+    print("You FINALLY GET TO THE WARLOCK'S CASTLE.")
+    time.sleep(3)
+    print("Find a way in without being discovered.")
+    time.sleep(3)
+    print("FIND YOUR DRAGON")
+    time.sleep(3)
+    print("STOP THE WARLOCK")
+    time.sleep(3)
+    print("SAVE YOUR DRAGON")
+    time.sleep(3)
+    print("YOU WIN")
+    win_game()
+
+
+def white_river():
+    """
+    Third quest path, level 2
     """
     print()
     print("  #######################")
@@ -76,7 +101,7 @@ def white_river():
 
 def windy_cave():
     """
-    Second quest path, level 2
+    Third quest path, level 2
     """
     print()
     print("  ####################")
