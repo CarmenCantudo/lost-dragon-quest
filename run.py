@@ -12,11 +12,10 @@ def select_weapon():
     """
     Take weapon from weapons list and move it to backpack list
     """
-    choice = True
-    while True:
+    while select_weapon:
         print("The weapons are:")
         for i, item in enumerate(weapons, start=1):
-            print(i,item)
+            print(i, item)
         get_weapon = input("Which weapon will you choose?\n")
             
         if get_weapon == "1":
@@ -40,6 +39,7 @@ def select_weapon():
         else:
             print("Please select a weapon.")
             select_weapon()
+
     # Delete weapon from weapon's list and add it to the backpack
     backpack.insert(0, weapons.pop(weapons.index(new_weapon)))
     return new_weapon
@@ -172,12 +172,39 @@ def ice_montain():
     print("  ######################")
     print()
     time.sleep(3)
+    print("You can feel the mountain.")
+    time.sleep(3)
     print("The loud whistle of the wind makes you think of otherworldly screams emanating from its underground cavities.") # noqa
     time.sleep(3)
     print("You start getting a terrible stench reaching up from the mountain's bowels.") # noqa
     time.sleep(3)
     print("You need to continue walking ")
+    time.sleep(3)
+    print("GET TO THE ABOMINABLE SNOWMAN")
+    time.sleep(3)
+    if backpack == "Fire Bomb":
+        print("USE THE Fire Bomb TO KILL IT")
+    else:
+        print("TRY KILLING IT WITH THE" + ", ".join(backpack).lower())
+    
+    time.sleep(3)
+    print("LEAVE THE MOUNTAIN AND CONTINUE YOUR JOURNEY")
+    print("YOU CHECK THE COMPASS AND IT POINTS TO THE EVIL WARLOCK CASTLE")
+    print("THERE ARE TWO WAYS TO GET THERE: GOING ACROSS THE WHITE RIVER OR THROUGH THE WINDY CAVE")
+    while True:
+        path = input("WHICH PATH WILL YOU CHOOSE? WHITE RIVER (1) or WINDY CAVE (2)")
+        if path == "1":
+            print("YOU CHOOSE THE WHITE RIVER")
+            white_river()
+            break
+        elif path == "2":
+            print("YOU CHOOSE THE WINDY CAVE")
+            windy_cave()
+            break
+        else:
+            print("THAT IS NOT AN OPTION. CHOOSE AGAIN!")
 
+    
 
 def game_over():
     """
