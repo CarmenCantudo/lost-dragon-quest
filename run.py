@@ -108,7 +108,7 @@ def game_over():
 
     """
     print(you_lose)
-    play_again = input_printing("Do you want to play again? Y/N")
+    play_again = input_printing("Do you want to play again? Y/N\n")
     while True:
         if play_again.lower() == "y":
             start_quest()
