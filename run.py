@@ -99,7 +99,7 @@ def game_over():
     """
     Finish the game
     """
-    printing("GAME OVER")
+    printing("GAME OVER\n")
     play_again = input_printing("Do you want to play again? Y/N")
     while True:
         if play_again.lower() == "y":
@@ -308,10 +308,10 @@ def ice_montain():
                           "WINDY CAVE (2)\n")
     while True:
         if path == "1":
-            printing("I choose the White River.")
+            printing("I choose the White River.\n")
             white_river()
         elif path == "2":
-            printing("I choose the Windy Cave")
+            printing("I choose the Windy Cave.\n")
             windy_cave()
         else:
             path = input_printing("That is not an option. Choose again! WHITE "
