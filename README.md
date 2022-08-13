@@ -23,10 +23,9 @@ The Live Game can be accessed [HERE!]( https://a-lost-dragons-quest.herokuapp.co
     - [Audience](#audience)
     - [User Goals](#user-goals)
   - [Design](#design)
-    - [Colour](#colour)
-    - [Wireframes](#wireframes)
+    - [Flow Diagram](#flow-diagram)
   - [Testing](#testing)
-    - [Validator Testing](#validator-testing)
+    - [Bugs Fixed](#bugs-fixed)
   - [Technologies Used](#technologies-used)
   - [Deployment](#deployment)
     - [Using Heroku](#using-heroku)
@@ -90,36 +89,33 @@ Anyone who enjoys a clear and concise text-based adventure.
 
 ### User Goals
 
-• I am intrigued by how the game works.
-• I want engaging adventures in the game.
-• I want the game to create the scenario and lure me into the narrative.
-• I want the decisions taken to feel as if they will have repercussions.
-• I want the game to have clear win or lose rules, such as survival or death.
-• I would like to be able to play the game again after it has ended.
+- I am intrigued by how the game works.
+- I want engaging adventures in the game.
+- I want the game to create the scenario and lure me into the narrative.
+- I want the decisions taken to feel as if they will have repercussions.
+- I want the game to have clear win or lose rules, such as survival or death.
+- I would like to be able to play the game again after it has ended.
 
 
 [Back to top](#lost-dragon-quest)
 
 ## Design
-### Colour
 
+### Flow Diagram
 
+[Flow diagram](assets/testing/flow-chart.png)
 
-### Wireframes
-
-
+The flow chart above, created with the website [Lucidchart](https://lucid.app/), provides a simplified overview of what I was trying to accomplish.
 
 ## Testing
 
 - The application was constantly tested during development.
-- Application tested in Chrome, Firefox, Microsoft Edge, and Brave.
-- Lighthouse was used to test the website for Performance, Accessibility, Best Practices and SEO for desktop and mobile:
-  ![Lighthouse Performance](assets/docs/testing/lighthouse.png)
+- To validate the code, the [PEP8 online validation tool](http://pep8online.com/) was used. The issues discovered are related to the blank spaces in the ASCII pictures.
 
-### Validator Testing
-- PYTHON
-  - No errors were returned when passing through the official [validator](https://validator.).
-  ![Python Validator](assets/docs/testing/python-validator.png)
+
+### Bugs Fixed
+During the creation of the while loops with the nested if statements, I had some problems and had to research and learn how to use it properly making each if, elif, else break or call the right function to continue with the next part of the story.
+
 
 [Back to top](#lost-dragon-quest)
 
@@ -130,7 +126,6 @@ Anyone who enjoys a clear and concise text-based adventure.
 - [Gitpod](https://gitpod.io/): Used to develop the application.
 - GitBash: Used to push the repository to Github.
 - [Heroku](https://www.heroku.com/): Used host and deploy the application.
-
 - [Lucidchart](https://www.lucidchart.com/): Used to make a flow diagram to help with the logic & flow of the code.
 - [Am I Responsive?](https://ui.dev/amiresponsive): to ensure the project looked good across all devices.
 - [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/): to complete the Readme.
