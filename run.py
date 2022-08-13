@@ -351,14 +351,11 @@ def dark_forest():
             time.sleep(1)
             break
         else:
-            main_road = input_printing("Enter Y or N")
+            main_road = input_printing("Enter Y or N\n")
     printing("You see some light nearby. The noises come from that area.\n")
-    time.sleep(1)
     printing("It is a goblin camp.\n")
-    time.sleep(1)
     print()
     printing("Suddenly a scream cuts the night and everything becomes quiet.\n")  # noqa
-    time.sleep(1)
     printing("The goblins have a man bound to a tree.\n")
     save_man = input_printing("Do you want to save the man? (Y/N): \n")
 
@@ -381,29 +378,20 @@ def dark_forest():
     # Save the man
     printing("You realised that there is only one goblin standing guard "
              "watching over the prisoner.\n")
-    time.sleep(1)
     printing("You won't have much time to save him before the rest of the "
              "goblins come back.\n")
-    time.sleep(1)
     printing("You decide to take some stones and throw them in the other "
              "direction so that the goblin goes to see what is happening.\n")
-    time.sleep(1)
     printing("When the goblin goes to the noise, you run around the camp to "
              "release the prisoner.\n")
-    time.sleep(1)
     printing("The prisoner is now free.\n")
-    time.sleep(1)
     printing("The man, thankful for his rescue offers some advice:\n")
     printing("- Only fire will rid the beast of the ice.\n")
-    time.sleep(1)
     printing("On the way out you see some weapons and you take them with you.\n")  # noqa
-    time.sleep(1)
     printing("You put the weapons in your backpack and run and hide far from "
              "the camp until everything seems safe.\n")
-    time.sleep(1)
     printing("You say goodbye to the man and, once you are out of the forest, "
              "you check the compass to see where to go next.\n")
-    time.sleep(1)
     printing("The compass is pointing to the Ice Mountain.\n")
     time.sleep(1)
     ice_montain()
