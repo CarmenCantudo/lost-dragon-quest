@@ -20,12 +20,8 @@ The Live Game can be accessed [HERE!]( https://a-lost-dragons-quest.herokuapp.co
     - [Future Features](#future-features)
   - [UX](#ux)
     - [Site Purpose](#site-purpose)
-    - [Site Goal](#site-goal)
     - [Audience](#audience)
-    - [Communication](#communication)
-    - [Current User Goals](#current-user-goals)
-    - [New User Goals](#new-user-goals)
-    - [Site Administrator Goals](#site-administrator-goals)
+    - [User Goals](#user-goals)
   - [Design](#design)
     - [Colour](#colour)
     - [Wireframes](#wireframes)
@@ -83,22 +79,23 @@ When you lose the game, an ASCII message with the words "You Lose!" appears.
 
 ## UX
 ### Site Purpose
-
-
-### Site Goal
+• To provide the player a basic yet entertaining game.
+• To develop an immersive storyline that makes the user feel the importance of each decision
+• To improve and sustain gaming instructions to the user.
 
 
 ### Audience
 Anyone who enjoys a clear and concise text-based adventure.
 
-### Communication
 
+### User Goals
 
-### Current User Goals
-
-### New User Goals
-
-### Site Administrator Goals
+• I am intrigued by how the game works.
+• I want engaging adventures in the game.
+• I want the game to create the scenario and lure me into the narrative.
+• I want the decisions taken to feel as if they will have repercussions.
+• I want the game to have clear win or lose rules, such as survival or death.
+• I would like to be able to play the game again after it has ended.
 
 
 [Back to top](#lost-dragon-quest)
