@@ -3,8 +3,10 @@
 
 This is a text based adventure based in python. The game is a text adventure set in a magical land in planet Apollo.
 
+The objetive of the game is to save your dragon that was capture by an evil warlock called Lord Orcus.
 
-![Responsive web image](assets/docs/testing/amiresponsive.PNG)
+
+![Responsive web image](assets/testing/amiresponsive.png)
 
 The Live Game can be accessed [HERE!]( https://a-lost-dragons-quest.herokuapp.com/)
 
@@ -41,23 +43,21 @@ The Live Game can be accessed [HERE!]( https://a-lost-dragons-quest.herokuapp.co
 
 ## Features
 ### Existing Features
-![Game](assets/docs/features/fullscreen.png)
 
-<details><summary> Header </summary>
+The entire text-based game was created in Python. It aims to encourage player interaction and enjoyment. The story progresses partly due to the player's decisions; if they are inadequate, they suffer consequences. When the player makes the incorrect decision, and the game ends, they have the option of starting over. With each new replay, they can progress incrementally toward the eventual result and win the game.
 
-![Header](assets/docs/features/header.png)
+![Game](assets/testing/fullscreen.png)
 
-The Header at the top of the page features a contrasting font that makes it stand out and prominently displays the game's title.
+-  Header
 
-</details>
+![Header title](assets/testing/header.png)
 
+The Header is the first thing that the app displays. It has a contrasting font that draws attention to the game's title.
 
-
-</details>
 
 ### Future Features
 
-- To store the scores and add a player name, click here.
+- To store the scores and add a player's name.
 
 [Back to top](#lost-dragon-quest)
 
@@ -69,7 +69,7 @@ The Header at the top of the page features a contrasting font that makes it stan
 
 
 ### Audience
-
+Anyone who enjoys a clear and concise text-based adventure.
 
 ### Communication
 
