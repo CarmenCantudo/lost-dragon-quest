@@ -115,7 +115,9 @@ def game_over():
             break
         elif play_again.lower() == "n":
             printing("Ok, see you soon!")
+            time.sleep(2)
             clear_screen()
+            main()
             break
         else:
             play_again = input_printing("Wrong answer. Insert Y or N.")
