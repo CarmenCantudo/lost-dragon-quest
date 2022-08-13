@@ -149,8 +149,8 @@ def warlocks_castle():
     print(FINAL_LEVEL)
     print()
     time.sleep(1)
-    printing("The castle with walls higher than cliffs and a door solid iron, "
-             "unbreakable.\n")
+    printing("The castle with walls higher than cliffs and a door... solid "
+             "iron... unbreakable.\n")
     printing("I need to find a way in without being discovered.\n")
     printing("But a weakness, the sewer appears large enough to fit a dragon "
              "and his rescuer.\n")
