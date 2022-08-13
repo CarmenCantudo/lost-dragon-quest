@@ -4,19 +4,19 @@ import sys
 
 
 # Variables
-DRAGONS_NAME = "Ignit"
+DRAGONS_NAME = "Ignis"
 QUEST_TITLE = ("""
 
-▄▄▌        .▄▄ · ▄▄▄▄▄    ·▄▄▄▄  ▄▄▄   ▄▄▄·  ▄▄ •        ▐ ▄ .▄▄ · 
-██•  ▪     ▐█ ▀. •██      ██▪ ██ ▀▄ █·▐█ ▀█ ▐█ ▀ ▪▪     •█▌▐█▐█ ▀. 
-██▪   ▄█▀▄ ▄▀▀▀█▄ ▐█.▪    ▐█· ▐█▌▐▀▀▄ ▄█▀▀█ ▄█ ▀█▄ ▄█▀▄ ▐█▐▐▌▄▀▀▀█▄
-▐█▌▐▌▐█▌.▐▌▐█▄▪▐█ ▐█▌·    ██. ██ ▐█•█▌▐█ ▪▐▌▐█▄▪▐█▐█▌.▐▌██▐█▌▐█▄▪▐█
-.▀▀▀  ▀█▄▀▪ ▀▀▀▀  ▀▀▀     ▀▀▀▀▀• .▀  ▀ ▀  ▀ ·▀▀▀▀  ▀█▄▀▪▀▀ █▪ ▀▀▀▀ 
-                    .▄▄▄  ▄• ▄▌▄▄▄ ..▄▄ · ▄▄▄▄▄                    
-                    ▐▀•▀█ █▪██▌▀▄.▀·▐█ ▀. •██                      
-                    █▌·.█▌█▌▐█▌▐▀▀▪▄▄▀▀▀█▄ ▐█.▪                    
-                    ▐█▪▄█·▐█▄█▌▐█▄▄▌▐█▄▪▐█ ▐█▌·                    
-                    ·▀▀█.  ▀▀▀  ▀▀▀  ▀▀▀▀  ▀▀▀                     
+      ▄▄▌        .▄▄ · ▄▄▄▄▄    ·▄▄▄▄  ▄▄▄   ▄▄▄·  ▄▄ •        ▐ ▄ .▄▄ · 
+      ██•  ▪     ▐█ ▀. •██      ██▪ ██ ▀▄ █·▐█ ▀█ ▐█ ▀ ▪▪     •█▌▐█▐█ ▀. 
+      ██▪   ▄█▀▄ ▄▀▀▀█▄ ▐█.▪    ▐█· ▐█▌▐▀▀▄ ▄█▀▀█ ▄█ ▀█▄ ▄█▀▄ ▐█▐▐▌▄▀▀▀█▄
+      ▐█▌▐▌▐█▌.▐▌▐█▄▪▐█ ▐█▌·    ██. ██ ▐█•█▌▐█ ▪▐▌▐█▄▪▐█▐█▌.▐▌██▐█▌▐█▄▪▐█
+      .▀▀▀  ▀█▄▀▪ ▀▀▀▀  ▀▀▀     ▀▀▀▀▀• .▀  ▀ ▀  ▀ ·▀▀▀▀  ▀█▄▀▪▀▀ █▪ ▀▀▀▀ 
+                          .▄▄▄  ▄• ▄▌▄▄▄ ..▄▄ · ▄▄▄▄▄                    
+                          ▐▀•▀█ █▪██▌▀▄.▀·▐█ ▀. •██                      
+                          █▌·.█▌█▌▐█▌▐▀▀▪▄▄▀▀▀█▄ ▐█.▪                    
+                          ▐█▪▄█·▐█▄█▌▐█▄▄▌▐█▄▪▐█ ▐█▌·                    
+                          ·▀▀█.  ▀▀▀  ▀▀▀  ▀▀▀▀  ▀▀▀                     
 """)
 DRAGON = """
         ..                    
@@ -58,6 +58,13 @@ LEVEL_THREE_RIVER = """
 |       LEVEL 3       |
 #######################
 """
+FINAL_LEVEL = """
+############################
+|   THE WARLOCK'S CASTLE   |
+|       FINAL LEVEL        |
+############################
+"""
+
 
 def printing(text):
     """
@@ -67,7 +74,7 @@ def printing(text):
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
-  
+
 
 def input_printing(text):
     """
@@ -124,23 +131,44 @@ def warlocks_castle():
     Final quest path, last level
     """
     print()
-    print("  ############################")
-    print("  |   THE WARLOCK'S CASTLE   |")
-    print("  |       FINAL LEVEL        |")
-    print("  ############################")
+    print(FINAL_LEVEL)
     print()
     time.sleep(1)
-    printing("You FINALLY GET TO THE WARLOCK'S CASTLE.")
+    printing("The castle with walls higher than cliffs and a door solid iron, "
+             "unbreakable.\n")
+    printing("I need to find a way in without being discovered.\n")
+    printing("But a weakness, the sewer appears large enough to fit a dragon "
+             "and his rescuer.\n")
+    use_cloak = input_printing("Should I use the invisibility cloak to enter "
+                               "the sewer? Y/N")
+    while True:
+        if use_cloak.lower() == "n":
+            printing("Suddenly, I hear footsteps behind me.\n")
+            printing("I try to hide but it's too late.\n")
+            printing("Some soldiers discover me and catch me.")
+            game_over()
+        elif use_cloak.lower() == "y":
+            printing("With the help of the compass, navigating the labyrinth, "
+                     "the dungeons appear and so to the blue-back dragon..\n")
+            break
+        else:
+            use_cloak = input_printing("Select Y or N.\n")
+    printing("With no sound emerging from the door, I slowly open it to find "
+             "my friend.\n")
     time.sleep(1)
-    printing("Find a way in without being discovered.")
+    printing(f"Decloaking myself, {DRAGONS_NAME}, as excited as can be, runs "
+             "to me, knocking everything along the path.\n")
+    printing("Lord Orcus knows I am here.\n")
     time.sleep(1)
-    printing("FIND YOUR DRAGON")
+    printing("I take my backpack and get the weapons.\n")
+    printing("He walks into the dungeons and raises his hands to cast a spell "
+             "on me.\n")
+    printing("I take the shield and cover myself with it.\n")
+    printing("The spell bounces off my shield and goes straight to Lord Orcus,"
+             " turning him into a toad.\n")
+    printing("I run to release my dragon and get out of that hideous castle.\n")
+    printing("It's time to go home.\n")
     time.sleep(1)
-    printing("STOP THE WARLOCK")
-    time.sleep(1)
-    printing("SAVE YOUR DRAGON")
-    time.sleep(1)
-    printing("YOU WIN")
     win_game()
 
 
@@ -160,7 +188,7 @@ def white_river():
              "knife through butter, ready to attack.\n")
     time.sleep(1)
     printing("You look through your backpack and see an ice bomb and a golden "
-             "sword.")
+             "sword.\n")
     use_weapons = input_printing("Should I use them? Y/N")
     while True:
         if use_weapons.lower() == "n":
@@ -171,16 +199,16 @@ def white_river():
             printing("I take the ice bomb and through it to the river.\n")
             break
         else:
-            use_weapons = input_printing("Choose Y/N.")
+            use_weapons = input_printing("Choose Y/N.\n")
     printing("It immediately turns to ice, trapping the Hydra.\n")
     printing("Unable to move she tries to reach me with her heads but she "
              "can't.\n")
-    printing("I pick up the sword and start fighting the Hydra.")
+    printing("I pick up the sword and start fighting the Hydra.\n")
     printing("She is stronger than me but the golden sword can hurt her and "
              "she can't grow more heads.\n")
-    printing("I manage to get to her and stab her with the sword.")
+    printing("I manage to get to her and stab her with the sword.\n")
     printing("The Hydra falls badly injured to one side and I take the "
-             "opportunity to cross the river and flee.")
+             "opportunity to cross the river and flee.\n")
     printing(f"Finally with one last mission {DRAGONS_NAME} shall be free.\n")
     time.sleep(1)
     warlocks_castle()
