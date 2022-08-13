@@ -48,6 +48,10 @@ The entire text-based game was created in Python. It aims to encourage player in
 
 The Header is the first thing that the app displays. It has a contrasting font that draws attention to the game's title.
 
+- Input validation and error-checking
+
+![Error message](assets/testing/input-validation.png)
+
 - Quest Start
 
 ![Dragon ASCII image](assets/testing/dragon.png)
