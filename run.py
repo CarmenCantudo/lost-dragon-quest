@@ -152,6 +152,7 @@ def warlocks_castle():
             printing("I try to hide but it's too late.\n")
             printing("Some soldiers discover me and catch me.")
             game_over()
+            break
         elif use_cloak.lower() == "y":
             printing("With the help of the compass, navigating the labyrinth, "
                      "the dungeons appear and so to the blue-back dragon..\n")
@@ -164,6 +165,7 @@ def warlocks_castle():
     printing(f"Decloaking myself, {DRAGONS_NAME}, as excited as can be, runs "
              "to me, knocking everything along the path.\n")
     printing("Lord Orcus knows I am here.\n")
+    printing("With no choice I must face this final challenge.")
     time.sleep(1)
     printing("I take my backpack and get the weapons.\n")
     printing("He walks into the dungeons and raises his hands to cast a spell "
@@ -200,6 +202,7 @@ def white_river():
             printing("The Hydra is faster than me.\n")
             printing("It only takes her a few steps to capture me.\n")
             game_over()
+            break
         elif use_weapons.lower() == "y":
             printing("I take the ice bomb and through it to the river.\n")
             break
@@ -239,6 +242,7 @@ def windy_cave():
         if use_sword.lower() == "y":
             printing("I take the sword and continue walking until I start "
                      "hearing some strange noises.\n")
+            break
         elif use_sword.lower() == "n":
             printing("I see a light coming towards me.\n")
             printing("I try to hide but can't see anything.\n")
@@ -261,6 +265,7 @@ def windy_cave():
         if use_cloak.lower() == "y":
             printing("I take the cloak and very quietly walk across the cavern"
                      " until I find myself save again and continue my quest.\n")  # noqa
+            break
         elif use_cloak.lower() == "n":
             printing("Suddenly a troll gives a snoring sound that scares you "
                      "and makes you fall on one of them.\n")
@@ -310,9 +315,11 @@ def ice_montain():
         if path == "1":
             printing("I choose the White River.\n")
             white_river()
+            break
         elif path == "2":
             printing("I choose the Windy Cave.\n")
             windy_cave()
+            break
         else:
             path = input_printing("That is not an option. Choose again! WHITE "
                                   "RIVER (1) or WINDY CAVE (2)\n")
@@ -345,6 +352,7 @@ def dark_forest():
             printing("You fall through a hole in the ground and find yourself "
                      "surronded by goblins.\n")
             game_over()
+            break
         elif main_road.lower() == "n":
             printing("You walk through the dark forest and you start hearing "
                      "lots of scary noises.\n")
@@ -368,6 +376,7 @@ def dark_forest():
             printing("You fall through a hole in the ground and find yourself "
                      "surronded by goblins.\n")
             game_over()
+            break
         elif save_man.lower() == "y":
             printing("You decide to save the man.")
             time.sleep(1)
@@ -442,8 +451,10 @@ def start_quest():
             time.sleep(5)
             clear_screen()
             main()
+            break
         elif continue_game.lower() == "y":
             dark_forest()
+            break
         else:
             continue_game = input_printing("Incorrect answer. Insert Y or N.\n")
             time.sleep(2)
@@ -474,8 +485,10 @@ def main():
             time.sleep(3)
             clear_screen()
             main()
+            break
         elif start_game.lower() == "y":
             start_quest()
+            break
         else:
             start_game = input_printing("Wrong choice. Please, click Y or N.\n"
                                         )
