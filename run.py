@@ -99,7 +99,15 @@ def game_over():
     """
     Finish the game
     """
-    printing("GAME OVER\n")
+    you_lose = """
+     __   __            _                _ 
+     \ \ / /__  _   _  | | ___  ___  ___| |
+      \ V / _ \| | | | | |/ _ \/ __|/ _ \ |
+       | | (_) | |_| | | | (_) \__ \  __/_|
+       |_|\___/ \__,_| |_|\___/|___/\___(_)
+
+    """
+    print(you_lose)
     play_again = input_printing("Do you want to play again? Y/N")
     while True:
         if play_again.lower() == "y":
@@ -456,7 +464,7 @@ def start_quest():
             dark_forest()
             break
         else:
-            continue_game = input_printing("Incorrect answer. Insert Y or N.\n")
+            continue_game = input_printing("Incorrect answer. Insert Y or N.\n")  # noqa
             time.sleep(2)
 
 
