@@ -6,7 +6,7 @@ This is a text based adventure based in python. The game is a text adventure set
 The objetive of the game is to save your dragon that was capture by an evil warlock called Lord Orcus.
 
 
-![Responsive web image](assets/testing/amiresponsive.png)
+![Responsive web image](assets/testing/am-i-responsive.png)
 
 The Live Game can be accessed [HERE!]( https://a-lost-dragons-quest.herokuapp.com/)
 
@@ -46,14 +46,19 @@ The Live Game can be accessed [HERE!]( https://a-lost-dragons-quest.herokuapp.co
 
 The entire text-based game was created in Python. It aims to encourage player interaction and enjoyment. The story progresses partly due to the player's decisions; if they are inadequate, they suffer consequences. When the player makes the incorrect decision, and the game ends, they have the option of starting over. With each new replay, they can progress incrementally toward the eventual result and win the game.
 
-![Game](assets/testing/fullscreen.png)
+![Game](assets/testing/full-screen.png)
 
 -  Header
 
-![Header title](assets/testing/header.png)
+![Header title](assets/testing/header-title.png)
 
 The Header is the first thing that the app displays. It has a contrasting font that draws attention to the game's title.
 
+- Quest Start
+
+![Dragon ASCII image](assets/testing/dragon.png)
+
+Before the story begins, an ASCII image of a dragon is displayed.
 
 ### Future Features
 
