@@ -160,7 +160,7 @@ def warlocks_castle():
         if use_cloak.lower() == "n":
             printing("Suddenly, I hear footsteps behind me.\n")
             printing("I try to hide but it's too late.\n")
-            printing("Some soldiers discover me and catch me.")
+            printing("Some soldiers discover me and catch me.\n")
             game_over()
             break
         elif use_cloak.lower() == "y":
@@ -175,7 +175,7 @@ def warlocks_castle():
     printing(f"Decloaking myself, {DRAGONS_NAME}, as excited as can be, runs "
              "to me, knocking everything along the path.\n")
     printing("Lord Orcus knows I am here.\n")
-    printing("With no choice I must face this final challenge.")
+    printing("With no choice I must face this final challenge.\n")
     time.sleep(1)
     printing("I take my backpack and get the weapons.\n")
     printing("He walks into the dungeons and raises his hands to cast a spell "
