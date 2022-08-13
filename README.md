@@ -76,6 +76,8 @@ When you lose the game, an ASCII message with the words "You Lose!" appears.
 
 - To store the scores and add a player's name to a list with the time it took the user to win.
 - To add 3 lives and every time you lose you can go back to the last scenario and choose something different until all the lives are gone.
+- Increase the number of options and content.
+- More options to pick weapons and a player's backpack inventory.
 
 [Back to top](#lost-dragon-quest)
 
