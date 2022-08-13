@@ -111,6 +111,9 @@ The flow chart above, created with the website [Lucidchart](https://lucid.app/),
 
 - The application was constantly tested during development.
 - To validate the code, the [PEP8 online validation tool](http://pep8online.com/) was used. The issues discovered are related to the blank spaces in the ASCII pictures.
+- Lighthouse was used to test the app for Performance, Accessibility and Best Practices:
+  
+  ![Lighthouse Performance](assets/testing/lighthouse.png)
 
 
 ### Bugs Fixed
