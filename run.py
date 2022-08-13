@@ -110,7 +110,7 @@ def game_over():
             clear_screen()
             break
         else:
-            printing("Wrong answer. Insert Y or N.")
+            play_again = input_printing("Wrong answer. Insert Y or N.")
 
 
 def win_game():
