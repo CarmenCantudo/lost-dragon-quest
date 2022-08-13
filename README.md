@@ -33,7 +33,6 @@ The Live Game can be accessed [HERE!]( https://a-lost-dragons-quest.herokuapp.co
     - [How to Clone it](#how-to-clone-it)
     - [Making a Local Clone](#making-a-local-clone)
   - [Credits](#credits)
-  - [Resources used in the process of the "Lost Dragon's Quest" game design and build:](#resources-used-in-the-process-of-the-lost-dragons-quest-game-design-and-build)
 
 
 ## Features
@@ -132,7 +131,6 @@ During the creation of the while loops with the nested if statements, I had some
 - [Lucidchart](https://www.lucidchart.com/): Used to make a flow diagram to help with the logic & flow of the code.
 - [Am I Responsive?](https://ui.dev/amiresponsive): to ensure the project looked good across all devices.
 - [Markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/): to complete the Readme.
-- Google Chrome DevTools – Used to debug and evaluate the site's responsiveness.
 
 [Back to top](#lost-dragon-quest)
 
@@ -176,7 +174,9 @@ During the creation of the while loops with the nested if statements, I had some
 ## Credits
 
 Resources used in the process of the "Lost Dragon's Quest" game design and build:
+- [Simple Python Project](https://www.youtube.com/watch?v=ypNFNr72Xe8) | Text-Based Adventure Game: Time Unraveled
 - 
+- [Python sleep()](https://realpython.com/python-sleep/): How to Add Time Delays to Your Code
 - Help with general questions: [StackOverFlow](https://stackoverflow.com/)
 - Love Sandwiches Code Institute project.
 
