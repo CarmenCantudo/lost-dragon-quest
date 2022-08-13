@@ -60,6 +60,12 @@ The Header is the first thing that the app displays. It has a contrasting font t
 
 Before the story begins, an ASCII image of a dragon is displayed.
 
+- Win message
+
+![You Win ASCII image](assets/testing/you-win.png)
+
+When you win the game, an ASCII message with the words You Win! appears.
+
 ### Future Features
 
 - To store the scores and add a player's name.
