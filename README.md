@@ -52,6 +52,8 @@ The Header is the first thing that the app displays. It has a contrasting font t
 
 ![Error message](assets/testing/input-validation.png)
 
+You have to enter the correct values to continue, if not it will keep asking until you insert the right values. It will always show you the possible values/options you need to insert when you are sure of your choice.
+
 - Quest Start
 
 ![Dragon ASCII image](assets/testing/dragon.png)
