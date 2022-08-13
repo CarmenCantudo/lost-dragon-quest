@@ -175,9 +175,12 @@ During the creation of the while loops with the nested if statements, I had some
 
 Resources used in the process of the "Lost Dragon's Quest" game design and build:
 - [Simple Python Project](https://www.youtube.com/watch?v=ypNFNr72Xe8) | Text-Based Adventure Game: Time Unraveled
-- 
+- [ASCII Generator](https://ascii-generator.site/)
 - [Python sleep()](https://realpython.com/python-sleep/): How to Add Time Delays to Your Code
-- Help with general questions: [StackOverFlow](https://stackoverflow.com/)
+- [Python Typing Text Effect](https://www.101computing.net/python-typing-text-effect/)
+- [Text to ASCII](https://patorjk.com/) Art Generator
+- [StackOverFlow](https://stackoverflow.com/): Help with general questions
 - Love Sandwiches Code Institute project.
+- [Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template) provided by Code Institute
 
 [Back to top](#lost-dragon-quest)
