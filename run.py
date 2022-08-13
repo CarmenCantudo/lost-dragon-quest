@@ -204,7 +204,7 @@ def white_river():
     printing("There she is in all her glory moving through the water like a "
              "knife through butter, ready to attack.\n")
     time.sleep(1)
-    printing("You look through your backpack and see an ice bomb and a golden "
+    printing("I look through my backpack and see an ice bomb and a golden "
              "sword.\n")
     use_weapons = input_printing("Should I use them? Y/N")
     while True:
@@ -246,7 +246,7 @@ def windy_cave():
     printing("A loud growl of what sounds like a troll echos in the chamber of"
              " black.\n")
     printing("There is a golden sword in my backpack. The sword is flammable.\n")  # noqa
-    use_sword = input_printing("Do you want to use the golden sword to light "
+    use_sword = input_printing("Do I want to use the golden sword to light "
                                "the room? Y/N\n")
     while True:
         if use_sword.lower() == "y":
@@ -262,7 +262,7 @@ def windy_cave():
             game_over()
             break
         else:
-            use_sword = input_printing("Wrong answer! Do you want to use the "
+            use_sword = input_printing("Wrong answer! Do I want to use the "
                                        "golden sword to light the room? Y/N\n")
     printing("I keep walking along the underground corridor until I reach a "
              "cavern.\n")
@@ -277,8 +277,8 @@ def windy_cave():
                      " until I find myself save again and continue my quest.\n")  # noqa
             break
         elif use_cloak.lower() == "n":
-            printing("Suddenly a troll gives a snoring sound that scares you "
-                     "and makes you fall on one of them.\n")
+            printing("Suddenly a troll gives a snoring sound that scares me "
+                     "and makes me fall on one of them.\n")
             printing("The trolls wake up and instantly capture me.\n")
             game_over()
             break
@@ -297,9 +297,9 @@ def ice_montain():
     print(LEVEL_TWO)
     print()
     time.sleep(1)
-    printing("I can feel the mountain.")
+    printing("I can feel the mountain.\n")
     time.sleep(1)
-    printing("The loud whistle of the wind makes you think of otherworldly "
+    printing("The loud whistle of the wind makes me think of otherworldly "
              "screams emanating from its underground cavities.")
     time.sleep(1)
     printing("I start getting a terrible stench reaching up from the "
@@ -319,7 +319,7 @@ def ice_montain():
     printing("I check the compass and it points to the Evil Warlock's Castle.\n")  # noqa
     printing("There are two ways to get there: going across the White River "
              "or through the Windy Cave.\n")
-    path = input_printing("Which path will you choose? WHITE RIVER (1) or "
+    path = input_printing("Which path will I choose? WHITE RIVER (1) or "
                           "WINDY CAVE (2)\n")
     while True:
         if path == "1":
@@ -343,74 +343,74 @@ def dark_forest():
     print(LEVEL_ONE)
     print()
     time.sleep(1)
-    printing("The compass is pointing to the Dark Forest, so you start "
+    printing("The compass is pointing to the Dark Forest, so I start "
              "walking straight away.\n")
-    printing("The light fades as you enter the forest, turning into a strange "
+    printing("The light fades as I enter the forest, turning into a strange "
              "dark and quiet place, the sounds have all but vanished.\n")
     printing("The smell of animal or beast hangs in a still air, no flowers "
              "seem to help the uneasy odor.\n")
-    printing("You need to decide if you want to continue walking along the "
+    printing("I need to decide if I want to continue walking along the "
              "main road or get out.\n")
-    main_road = input_printing("Do you want to stay in the main road? (Y/N):\n"
+    main_road = input_printing("Do I want to stay in the main road? (Y/N):\n"
                                )
     # Option: continue or not on the main road
     while True:
         if main_road.lower() == "y":
-            printing("You continue on the main road, walking through the "
-                     "forest, when suddenly you hear a crack.\n")
+            printing("I continue on the main road, walking through the "
+                     "forest, when suddenly I hear a crack.\n")
             time.sleep(1)
-            printing("You fall through a hole in the ground and find yourself "
+            printing("I fall through a hole in the ground and find myself "
                      "surronded by goblins.\n")
             game_over()
             break
         elif main_road.lower() == "n":
-            printing("You walk through the dark forest and you start hearing "
+            printing("I walk through the dark forest and I start hearing "
                      "lots of scary noises.\n")
             time.sleep(1)
             break
         else:
             main_road = input_printing("Enter Y or N\n")
-    printing("You see some light nearby. The noises come from that area.\n")
+    printing("I see some light nearby. The noises come from that area.\n")
     printing("It is a goblin camp.\n")
     print()
     printing("Suddenly a scream cuts the night and everything becomes quiet.\n")  # noqa
     printing("The goblins have a man bound to a tree.\n")
-    save_man = input_printing("Do you want to save the man? (Y/N): \n")
+    save_man = input_printing("Do I want to save the man? (Y/N): \n")
 
     # Option: save the man or continue
     while True:
         if save_man.lower() == "n":
-            printing("You leave the camp, walking through the forest, when "
-                     "suddenly you hear a crack.\n")
+            printing("I leave the camp, walking through the forest, when "
+                     "suddenly I hear a crack.\n")
             time.sleep(1)
-            printing("You fall through a hole in the ground and find yourself "
+            printing("I fall through a hole in the ground and find myself "
                      "surronded by goblins.\n")
             game_over()
             break
         elif save_man.lower() == "y":
-            printing("You decide to save the man.")
+            printing("I decide to save the man.")
             time.sleep(1)
             break
         else:
             save_man = input_printing("Select Y or N")
 
     # Save the man
-    printing("You realised that there is only one goblin standing guard "
+    printing("I realised that there is only one goblin standing guard "
              "watching over the prisoner.\n")
-    printing("You won't have much time to save him before the rest of the "
+    printing("I won't have much time to save him before the rest of the "
              "goblins come back.\n")
-    printing("You decide to take some stones and throw them in the other "
+    printing("I decide to take some stones and throw them in the other "
              "direction so that the goblin goes to see what is happening.\n")
-    printing("When the goblin goes to the noise, you run around the camp to "
+    printing("When the goblin goes to the noise, I run around the camp to "
              "release the prisoner.\n")
     printing("The prisoner is now free.\n")
     printing("The man, thankful for his rescue offers some advice:\n")
     printing("- Only fire will rid the beast of the ice.\n")
-    printing("On the way out you see some weapons and you take them with you.\n")  # noqa
-    printing("You put the weapons in your backpack and run and hide far from "
+    printing("On the way out I see some weapons and I take them with me.\n")  # noqa
+    printing("I put the weapons in my backpack and run and hide far from "
              "the camp until everything seems safe.\n")
-    printing("You say goodbye to the man and, once you are out of the forest, "
-             "you check the compass to see where to go next.\n")
+    printing("I say goodbye to the man and, once I are out of the forest, "
+             "I check the compass to see where to go next.\n")
     printing("The compass is pointing to the Ice Mountain.\n")
     time.sleep(1)
     ice_montain()
@@ -453,7 +453,7 @@ def start_quest():
              "perilous quest.\n")
     print()
 
-    continue_game = input_printing("Will you go to save your dragon now? "
+    continue_game = input_printing("Should I go to save my dragon now? "
                                    "(Y/N): \n")
     while True:
         if continue_game.lower() == "n":
