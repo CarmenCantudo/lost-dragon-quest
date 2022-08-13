@@ -422,40 +422,31 @@ def start_quest():
     time.sleep(1)
     printing("It was five years ago when, with the shake of the earth upon "
              "the eclipse, fire filled the sky.\n")
-    time.sleep(1)
     printing("Mount Bolcán had erupted after 1000 years of sleeping.\n")
-    time.sleep(1)
     printing("They call her the dragon's láir, for when she wakes, the legend "
              "says so to a blue-back dragon is born.\n")
-    time.sleep(1)
     printing("With a glimmer of light left from the moon and the fire in the "
              "sky, an oval-shaped sphere with a bright red shell began to "
              "appear.\n")
-    time.sleep(1)
     printing("Tumbling down the mountain until reaching my feet, not a crack "
              "nor a scratch to be seen.\n")
-    time.sleep(1)
     printing("Grabbing this egg to shelter in the warmth until that magical "
              "seventh night, when, with a crackle quieter than a mouse, I"
              " awoke.\n")
     time.sleep(1)
     printing(f"{DRAGONS_NAME}, the last blue-back dragon, was born.\n")
     printing(f"From that day until now, we raised {DRAGONS_NAME} as kin.\n")
-    time.sleep(1)
     print()
     printing("That was until Lord Orcus, the evil warlock, took her.\n")
     time.sleep(1)
     printing("Legend tells that on the blood moon, the blood of a blue-back "
              "dragon can complete the spell to control all living creatures on"
              " planet Apollo.\n")
-    time.sleep(1)
     printing("It is but two days before the Blood Moon, and I must find and "
              f"save {DRAGONS_NAME} and all those on Apollo.\n")
-    time.sleep(1)
     printing(f"But all I have is my compass made from the stone of Bolcán, "
              f"pointing to {DRAGONS_NAME} and courage to guide me on this "
              "perilous quest.\n")
-    time.sleep(1)
     print()
 
     continue_game = input_printing("Will you go to save your dragon now? "
@@ -463,15 +454,13 @@ def start_quest():
     while True:
         if continue_game.lower() == "n":
             printing(f"Don't wait for too long, {DRAGONS_NAME} needs you!")
+            time.sleep(5)
             clear_screen()
-            time.sleep(2)
             main()
         elif continue_game.lower() == "y":
             dark_forest()
         else:
-            printing("Incorrect answer. Insert Y or N.\n")
-            continue_game = input_printing("Will you go to save your dragon "
-                                           "now? (Y/N): \n")
+            continue_game = input_printing("Incorrect answer. Insert Y or N.\n")
             time.sleep(2)
 
 
