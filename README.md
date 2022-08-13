@@ -64,11 +64,18 @@ Before the story begins, an ASCII image of a dragon is displayed.
 
 ![You Win ASCII image](assets/testing/you-win.png)
 
-When you win the game, an ASCII message with the words You Win! appears.
+When you win the game, an ASCII message with the words "You Win!" appears.
+
+- Lose message
+
+![You Win ASCII image](assets/testing/you-lose.png)
+
+When you lose the game, an ASCII message with the words "You Lose!" appears.
 
 ### Future Features
 
-- To store the scores and add a player's name.
+- To store the scores and add a player's name to a list with the time it took the user to win.
+- To add 3 lives and every time you lose you can go back to the last scenario and choose something different until all the lives are gone.
 
 [Back to top](#lost-dragon-quest)
 
