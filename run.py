@@ -433,7 +433,7 @@ def start_quest():
     printing("Grabbing this egg to shelter in the warmth until that magical "
              "seventh night, when, with a crackle quieter than a mouse, I"
              " awoke.\n")
-    time.sleep(1)
+    print()
     printing(f"{DRAGONS_NAME}, the last blue-back dragon, was born.\n")
     printing(f"From that day until now, we raised {DRAGONS_NAME} as kin.\n")
     print()
