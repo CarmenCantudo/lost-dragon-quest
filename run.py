@@ -84,7 +84,7 @@ def input_printing(text):
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
-    value = input()  
+    value = input()
     return value
 
 
@@ -171,7 +171,7 @@ def warlocks_castle():
     printing("I take the shield and cover myself with it.\n")
     printing("The spell bounces off my shield and goes straight to Lord Orcus,"
              " turning him into a toad.\n")
-    printing("I run to release my dragon and get out of that hideous castle.\n")
+    printing("I run to release my dragon and get out of that hideous castle.\n")  # noqa
     printing("It's time to go home.\n")
     time.sleep(1)
     win_game()
@@ -185,7 +185,7 @@ def white_river():
     print(LEVEL_THREE_RIVER)
     print()
     time.sleep(1)
-    printing("As I approach the river the sounds of nature all but disappear.\n")
+    printing("As I approach the river the sounds of nature all but disappear.\n")  # noqa
     printing("Now just rapid water fills my ears.\n")
     printing("Crossing the wooden bridge broken and soaked I hear the scream "
              "of Hydra.\n")
@@ -229,10 +229,10 @@ def windy_cave():
     time.sleep(1)
     printing("I can see the mist coming out of the Windy Caves.\n")
     printing("As I travel further and further in the windy caves the light "
-             "begins to disappear until the darkness has consumed the bright.\n") # noqa
+             "begins to disappear until the darkness has consumed the bright.\n")  # noqa
     printing("A loud growl of what sounds like a troll echos in the chamber of"
              " black.\n")
-    printing("There is a golden sword in my backpack. The sword is flammable.\n") # noqa
+    printing("There is a golden sword in my backpack. The sword is flammable.\n")  # noqa
     use_sword = input_printing("Do you want to use the golden sword to light "
                                "the room? Y/N\n")
     while True:
@@ -260,7 +260,7 @@ def windy_cave():
     while True:
         if use_cloak.lower() == "y":
             printing("I take the cloak and very quietly walk across the cavern"
-                     " until I find myself save again and continue my quest.\n") # noqa
+                     " until I find myself save again and continue my quest.\n")  # noqa
         elif use_cloak.lower() == "n":
             printing("Suddenly a troll gives a snoring sound that scares you "
                      "and makes you fall on one of them.\n")
@@ -301,7 +301,7 @@ def ice_montain():
              "bomb explodes on top of him, covering him in flames.\n")
     printing("I run as fast as possible, leaving the mountain behind and "
              "continuing my journey.\n")
-    printing("I check the compass and it points to the Evil Warlock's Castle.\n") # noqa
+    printing("I check the compass and it points to the Evil Warlock's Castle.\n")  # noqa
     printing("There are two ways to get there: going across the White River "
              "or through the Windy Cave.\n")
     path = input_printing("Which path will you choose? WHITE RIVER (1) or "
@@ -354,13 +354,13 @@ def dark_forest():
             time.sleep(1)
             break
         else:
-            main_road = input_printing("Enter Y or N")   
+            main_road = input_printing("Enter Y or N")
     printing("You see some light nearby. The noises come from that area.\n")
     time.sleep(1)
     printing("It is a goblin camp.\n")
     time.sleep(1)
     print()
-    printing("Suddenly a scream cuts the night and everything becomes quiet.\n") # noqa
+    printing("Suddenly a scream cuts the night and everything becomes quiet.\n")  # noqa
     time.sleep(1)
     printing("The goblins have a man bound to a tree.\n")
     save_man = input_printing("Do you want to save the man? (Y/N): \n")
@@ -399,7 +399,7 @@ def dark_forest():
     printing("The man, thankful for his rescue offers some advice:\n")
     printing("- Only fire will rid the beast of the ice.\n")
     time.sleep(1)
-    printing("On the way out you see some weapons and you take them with you.\n")
+    printing("On the way out you see some weapons and you take them with you.\n")  # noqa
     time.sleep(1)
     printing("You put the weapons in your backpack and run and hide far from "
              "the camp until everything seems safe.\n")
