@@ -328,15 +328,12 @@ def dark_forest():
     time.sleep(1)
     printing("The compass is pointing to the Dark Forest, so you start "
              "walking straight away.\n")
-    time.sleep(1)
     printing("The light fades as you enter the forest, turning into a strange "
              "dark and quiet place, the sounds have all but vanished.\n")
-    time.sleep(1)
     printing("The smell of animal or beast hangs in a still air, no flowers "
              "seem to help the uneasy odor.\n")
-    time.sleep(1)
     printing("You need to decide if you want to continue walking along the "
-             "main road or get out.")
+             "main road or get out.\n")
     main_road = input_printing("Do you want to stay in the main road? (Y/N):\n"
                                )
     # Option: continue or not on the main road
